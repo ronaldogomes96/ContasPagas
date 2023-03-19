@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */; };
+		77EAD7AA29C6BD7D0001B965 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7A929C6BD7D0001B965 /* ContentView.swift */; };
+		77EAD7AC29C6BD7F0001B965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EAD7AB29C6BD7F0001B965 /* Assets.xcassets */; };
+		77EAD7AF29C6BD7F0001B965 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EAD7AE29C6BD7F0001B965 /* Preview Assets.xcassets */; };
+		77EAD7B129C6BD7F0001B965 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7B029C6BD7F0001B965 /* Persistence.swift */; };
+		77EAD7B429C6BD7F0001B965 /* ContasPagas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7B229C6BD7F0001B965 /* ContasPagas.xcdatamodeld */; };
+		77EAD7BF29C6BD7F0001B965 /* ContasPagasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7BE29C6BD7F0001B965 /* ContasPagasTests.swift */; };
+		77EAD7C929C6BD7F0001B965 /* ContasPagasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7C829C6BD7F0001B965 /* ContasPagasUITests.swift */; };
+		77EAD7CB29C6BD7F0001B965 /* ContasPagasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7CA29C6BD7F0001B965 /* ContasPagasUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77EAD7BB29C6BD7F0001B965 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77EAD79C29C6BD7D0001B965 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77EAD7A329C6BD7D0001B965;
+			remoteInfo = ContasPagas;
+		};
+		77EAD7C529C6BD7F0001B965 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77EAD79C29C6BD7D0001B965 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77EAD7A329C6BD7D0001B965;
+			remoteInfo = ContasPagas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		77EAD7A429C6BD7D0001B965 /* ContasPagas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContasPagas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContasPagasApp.swift; sourceTree = "<group>"; };
+		77EAD7A929C6BD7D0001B965 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		77EAD7AB29C6BD7F0001B965 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77EAD7AE29C6BD7F0001B965 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		77EAD7B029C6BD7F0001B965 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		77EAD7B329C6BD7F0001B965 /* ContasPagas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContasPagas.xcdatamodel; sourceTree = "<group>"; };
+		77EAD7B529C6BD7F0001B965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77EAD7BA29C6BD7F0001B965 /* ContasPagasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContasPagasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77EAD7BE29C6BD7F0001B965 /* ContasPagasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContasPagasTests.swift; sourceTree = "<group>"; };
+		77EAD7C429C6BD7F0001B965 /* ContasPagasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContasPagasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77EAD7C829C6BD7F0001B965 /* ContasPagasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContasPagasUITests.swift; sourceTree = "<group>"; };
+		77EAD7CA29C6BD7F0001B965 /* ContasPagasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContasPagasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77EAD7A129C6BD7D0001B965 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77EAD7B729C6BD7F0001B965 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77EAD7C129C6BD7F0001B965 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77EAD79B29C6BD7D0001B965 = {
+			isa = PBXGroup;
+			children = (
+				77EAD7A629C6BD7D0001B965 /* ContasPagas */,
+				77EAD7BD29C6BD7F0001B965 /* ContasPagasTests */,
+				77EAD7C729C6BD7F0001B965 /* ContasPagasUITests */,
+				77EAD7A529C6BD7D0001B965 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77EAD7A529C6BD7D0001B965 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77EAD7A429C6BD7D0001B965 /* ContasPagas.app */,
+				77EAD7BA29C6BD7F0001B965 /* ContasPagasTests.xctest */,
+				77EAD7C429C6BD7F0001B965 /* ContasPagasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77EAD7A629C6BD7D0001B965 /* ContasPagas */ = {
+			isa = PBXGroup;
+			children = (
+				77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */,
+				77EAD7A929C6BD7D0001B965 /* ContentView.swift */,
+				77EAD7AB29C6BD7F0001B965 /* Assets.xcassets */,
+				77EAD7B029C6BD7F0001B965 /* Persistence.swift */,
+				77EAD7B529C6BD7F0001B965 /* Info.plist */,
+				77EAD7B229C6BD7F0001B965 /* ContasPagas.xcdatamodeld */,
+				77EAD7AD29C6BD7F0001B965 /* Preview Content */,
+			);
+			path = ContasPagas;
+			sourceTree = "<group>";
+		};
+		77EAD7AD29C6BD7F0001B965 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				77EAD7AE29C6BD7F0001B965 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		77EAD7BD29C6BD7F0001B965 /* ContasPagasTests */ = {
+			isa = PBXGroup;
+			children = (
+				77EAD7BE29C6BD7F0001B965 /* ContasPagasTests.swift */,
+			);
+			path = ContasPagasTests;
+			sourceTree = "<group>";
+		};
+		77EAD7C729C6BD7F0001B965 /* ContasPagasUITests */ = {
+			isa = PBXGroup;
+			children = (
+				77EAD7C829C6BD7F0001B965 /* ContasPagasUITests.swift */,
+				77EAD7CA29C6BD7F0001B965 /* ContasPagasUITestsLaunchTests.swift */,
+			);
+			path = ContasPagasUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77EAD7A329C6BD7D0001B965 /* ContasPagas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77EAD7CE29C6BD7F0001B965 /* Build configuration list for PBXNativeTarget "ContasPagas" */;
+			buildPhases = (
+				77EAD7A029C6BD7D0001B965 /* Sources */,
+				77EAD7A129C6BD7D0001B965 /* Frameworks */,
+				77EAD7A229C6BD7D0001B965 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContasPagas;
+			productName = ContasPagas;
+			productReference = 77EAD7A429C6BD7D0001B965 /* ContasPagas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		77EAD7B929C6BD7F0001B965 /* ContasPagasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77EAD7D129C6BD7F0001B965 /* Build configuration list for PBXNativeTarget "ContasPagasTests" */;
+			buildPhases = (
+				77EAD7B629C6BD7F0001B965 /* Sources */,
+				77EAD7B729C6BD7F0001B965 /* Frameworks */,
+				77EAD7B829C6BD7F0001B965 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77EAD7BC29C6BD7F0001B965 /* PBXTargetDependency */,
+			);
+			name = ContasPagasTests;
+			productName = ContasPagasTests;
+			productReference = 77EAD7BA29C6BD7F0001B965 /* ContasPagasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		77EAD7C329C6BD7F0001B965 /* ContasPagasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77EAD7D429C6BD7F0001B965 /* Build configuration list for PBXNativeTarget "ContasPagasUITests" */;
+			buildPhases = (
+				77EAD7C029C6BD7F0001B965 /* Sources */,
+				77EAD7C129C6BD7F0001B965 /* Frameworks */,
+				77EAD7C229C6BD7F0001B965 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77EAD7C629C6BD7F0001B965 /* PBXTargetDependency */,
+			);
+			name = ContasPagasUITests;
+			productName = ContasPagasUITests;
+			productReference = 77EAD7C429C6BD7F0001B965 /* ContasPagasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77EAD79C29C6BD7D0001B965 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					77EAD7A329C6BD7D0001B965 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					77EAD7B929C6BD7F0001B965 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 77EAD7A329C6BD7D0001B965;
+					};
+					77EAD7C329C6BD7F0001B965 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 77EAD7A329C6BD7D0001B965;
+					};
+				};
+			};
+			buildConfigurationList = 77EAD79F29C6BD7D0001B965 /* Build configuration list for PBXProject "ContasPagas" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77EAD79B29C6BD7D0001B965;
+			productRefGroup = 77EAD7A529C6BD7D0001B965 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77EAD7A329C6BD7D0001B965 /* ContasPagas */,
+				77EAD7B929C6BD7F0001B965 /* ContasPagasTests */,
+				77EAD7C329C6BD7F0001B965 /* ContasPagasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77EAD7A229C6BD7D0001B965 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77EAD7AF29C6BD7F0001B965 /* Preview Assets.xcassets in Resources */,
+				77EAD7AC29C6BD7F0001B965 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77EAD7B829C6BD7F0001B965 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77EAD7C229C6BD7F0001B965 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77EAD7A029C6BD7D0001B965 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77EAD7B429C6BD7F0001B965 /* ContasPagas.xcdatamodeld in Sources */,
+				77EAD7B129C6BD7F0001B965 /* Persistence.swift in Sources */,
+				77EAD7AA29C6BD7D0001B965 /* ContentView.swift in Sources */,
+				77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77EAD7B629C6BD7F0001B965 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77EAD7BF29C6BD7F0001B965 /* ContasPagasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77EAD7C029C6BD7F0001B965 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77EAD7C929C6BD7F0001B965 /* ContasPagasUITests.swift in Sources */,
+				77EAD7CB29C6BD7F0001B965 /* ContasPagasUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77EAD7BC29C6BD7F0001B965 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77EAD7A329C6BD7D0001B965 /* ContasPagas */;
+			targetProxy = 77EAD7BB29C6BD7F0001B965 /* PBXContainerItemProxy */;
+		};
+		77EAD7C629C6BD7F0001B965 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77EAD7A329C6BD7D0001B965 /* ContasPagas */;
+			targetProxy = 77EAD7C529C6BD7F0001B965 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		77EAD7CC29C6BD7F0001B965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		77EAD7CD29C6BD7F0001B965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77EAD7CF29C6BD7F0001B965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ContasPagas/Preview Content\"";
+				DEVELOPMENT_TEAM = 69Y77S7YQP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ronaldogomes.ContasPagas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77EAD7D029C6BD7F0001B965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ContasPagas/Preview Content\"";
+				DEVELOPMENT_TEAM = 69Y77S7YQP;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ronaldogomes.ContasPagas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		77EAD7D229C6BD7F0001B965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69Y77S7YQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ronaldogomes.ContasPagasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContasPagas.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ContasPagas";
+			};
+			name = Debug;
+		};
+		77EAD7D329C6BD7F0001B965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69Y77S7YQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ronaldogomes.ContasPagasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContasPagas.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ContasPagas";
+			};
+			name = Release;
+		};
+		77EAD7D529C6BD7F0001B965 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69Y77S7YQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ronaldogomes.ContasPagasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ContasPagas;
+			};
+			name = Debug;
+		};
+		77EAD7D629C6BD7F0001B965 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 69Y77S7YQP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ronaldogomes.ContasPagasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ContasPagas;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77EAD79F29C6BD7D0001B965 /* Build configuration list for PBXProject "ContasPagas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77EAD7CC29C6BD7F0001B965 /* Debug */,
+				77EAD7CD29C6BD7F0001B965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77EAD7CE29C6BD7F0001B965 /* Build configuration list for PBXNativeTarget "ContasPagas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77EAD7CF29C6BD7F0001B965 /* Debug */,
+				77EAD7D029C6BD7F0001B965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77EAD7D129C6BD7F0001B965 /* Build configuration list for PBXNativeTarget "ContasPagasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77EAD7D229C6BD7F0001B965 /* Debug */,
+				77EAD7D329C6BD7F0001B965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77EAD7D429C6BD7F0001B965 /* Build configuration list for PBXNativeTarget "ContasPagasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77EAD7D529C6BD7F0001B965 /* Debug */,
+				77EAD7D629C6BD7F0001B965 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		77EAD7B229C6BD7F0001B965 /* ContasPagas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				77EAD7B329C6BD7F0001B965 /* ContasPagas.xcdatamodel */,
+			);
+			currentVersion = 77EAD7B329C6BD7F0001B965 /* ContasPagas.xcdatamodel */;
+			path = ContasPagas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 77EAD79C29C6BD7D0001B965 /* Project object */;
+}
