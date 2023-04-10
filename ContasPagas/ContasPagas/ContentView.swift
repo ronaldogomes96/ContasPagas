@@ -10,7 +10,7 @@ import AuthenticationServices
 
 struct ContentView: View {
     @Environment(\.colorScheme) var colorScheme
-    
+
     var body: some View {
         VStack(spacing: 58) {
             Image("Logo_levi")
@@ -20,18 +20,20 @@ struct ContentView: View {
             
             Text("ContasPagas")
                 .font(.largeTitle)
-            
+
             Text("Inicie sua sessão e comece a gerenciar suas despesas")
                 .font(.title2)
                 .multilineTextAlignment(.center)
             
-            SignInWithAppleButton(onRequest: { _ in
-                
-            }, onCompletion: { _ in
-                
-            })
-            .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
-            .frame(height: 42)
+            Button(action: {
+                print("Navigate to login")
+            }) {
+                Text("Login")
+                    .foregroundColor(.white)
+            }
+            .frame(maxWidth: .infinity, maxHeight: 42)
+            .background(Color.black)
+            .cornerRadius(10)
         }
         .padding(24)
     }
