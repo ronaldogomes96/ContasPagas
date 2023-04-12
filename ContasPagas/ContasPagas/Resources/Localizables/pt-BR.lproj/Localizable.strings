@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  ContasPagas
+
+  Created by Ronaldo Gomes on 11/04/23.
+  
+*/
+
+"login-appName" = "ContasPagas";
+"login-messageTitle" = "Inicie sua sessão e comece a gerenciar suas despesas";
+"login-button-title" = "Login";

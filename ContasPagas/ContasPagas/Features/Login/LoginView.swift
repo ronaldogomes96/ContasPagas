@@ -8,7 +8,7 @@
 import SwiftUI
 import AuthenticationServices
 
-struct ContentView: View {
+struct LoginView: View {
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
@@ -18,17 +18,17 @@ struct ContentView: View {
                 .background(Color.blue)
                 .clipShape(Circle())
             
-            Text("ContasPagas")
+            Text(LocalizableStrings.appName.localized)
                 .font(.largeTitle)
 
-            Text("Inicie sua sessão e comece a gerenciar suas despesas")
+            Text(LocalizableStrings.loginMessageTitle.localized)
                 .font(.title2)
                 .multilineTextAlignment(.center)
             
             Button(action: {
                 print("Navigate to login")
             }) {
-                Text("Login")
+                Text(LocalizableStrings.loginButtonTitle.localized)
                     .foregroundColor(.white)
             }
             .frame(maxWidth: .infinity, maxHeight: 42)
@@ -41,6 +41,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoginView()
     }
 }

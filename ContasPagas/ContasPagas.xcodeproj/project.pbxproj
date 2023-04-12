@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		770E1D3229C6C2A600854ECA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 770E1D3129C6C2A600854ECA /* .swiftlint.yml */; };
+		77484D0B29E6405900AEC21B /* Preview Content.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77484D0A29E6405900AEC21B /* Preview Content.xcassets */; };
+		77B16BDF29E63A31007E8125 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77B16BE129E63A31007E8125 /* Localizable.strings */; };
+		77B16BE529E63E96007E8125 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B16BE429E63E96007E8125 /* LocalizableStrings.swift */; };
 		77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */; };
-		77EAD7AA29C6BD7D0001B965 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7A929C6BD7D0001B965 /* ContentView.swift */; };
+		77EAD7AA29C6BD7D0001B965 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7A929C6BD7D0001B965 /* LoginView.swift */; };
 		77EAD7AC29C6BD7F0001B965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EAD7AB29C6BD7F0001B965 /* Assets.xcassets */; };
-		77EAD7AF29C6BD7F0001B965 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EAD7AE29C6BD7F0001B965 /* Preview Assets.xcassets */; };
 		77EAD7B129C6BD7F0001B965 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7B029C6BD7F0001B965 /* Persistence.swift */; };
 		77EAD7B429C6BD7F0001B965 /* ContasPagas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7B229C6BD7F0001B965 /* ContasPagas.xcdatamodeld */; };
 		77EAD7BF29C6BD7F0001B965 /* ContasPagasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7BE29C6BD7F0001B965 /* ContasPagasTests.swift */; };
@@ -38,12 +40,15 @@
 
 /* Begin PBXFileReference section */
 		770E1D3129C6C2A600854ECA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		77484D0A29E6405900AEC21B /* Preview Content.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Content.xcassets"; sourceTree = "<group>"; };
 		77664AD129D36E1000A407A1 /* ContasPagas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContasPagas.entitlements; sourceTree = "<group>"; };
+		77B16BE029E63A31007E8125 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		77B16BE229E63A34007E8125 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		77B16BE429E63E96007E8125 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		77EAD7A429C6BD7D0001B965 /* ContasPagas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContasPagas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContasPagasApp.swift; sourceTree = "<group>"; };
-		77EAD7A929C6BD7D0001B965 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		77EAD7A929C6BD7D0001B965 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		77EAD7AB29C6BD7F0001B965 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		77EAD7AE29C6BD7F0001B965 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		77EAD7B029C6BD7F0001B965 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		77EAD7B329C6BD7F0001B965 /* ContasPagas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContasPagas.xcdatamodel; sourceTree = "<group>"; };
 		77EAD7B529C6BD7F0001B965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +84,90 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77484D0929E6404400AEC21B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				77484D0A29E6405900AEC21B /* Preview Content.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7761FBB729E4D7E700D9229C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */,
+				77EAD7B529C6BD7F0001B965 /* Info.plist */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		7761FBB829E4D7F100D9229C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				77B16BE329E63E83007E8125 /* Localizable */,
+				77B16BDA29E5C3B7007E8125 /* Persistance */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7761FBB929E4D80000D9229C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				77B16BDB29E63975007E8125 /* Login */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		77B16BD629E5C147007E8125 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77B16BD829E5C181007E8125 /* Localizables */,
+				77B16BD729E5C172007E8125 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		77B16BD729E5C172007E8125 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				77484D0929E6404400AEC21B /* Preview Content */,
+				77EAD7AB29C6BD7F0001B965 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		77B16BD829E5C181007E8125 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				77B16BE129E63A31007E8125 /* Localizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
+		77B16BDA29E5C3B7007E8125 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				77EAD7B029C6BD7F0001B965 /* Persistence.swift */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		77B16BDB29E63975007E8125 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				77EAD7A929C6BD7D0001B965 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		77B16BE329E63E83007E8125 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				77B16BE429E63E96007E8125 /* LocalizableStrings.swift */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		77EAD79B29C6BD7D0001B965 = {
 			isa = PBXGroup;
 			children = (
@@ -102,25 +191,15 @@
 		77EAD7A629C6BD7D0001B965 /* ContasPagas */ = {
 			isa = PBXGroup;
 			children = (
-				77664AD129D36E1000A407A1 /* ContasPagas.entitlements */,
-				77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */,
-				77EAD7A929C6BD7D0001B965 /* ContentView.swift */,
-				77EAD7AB29C6BD7F0001B965 /* Assets.xcassets */,
-				77EAD7B029C6BD7F0001B965 /* Persistence.swift */,
-				77EAD7B529C6BD7F0001B965 /* Info.plist */,
+				77B16BD629E5C147007E8125 /* Resources */,
+				7761FBB929E4D80000D9229C /* Features */,
+				7761FBB829E4D7F100D9229C /* Domain */,
+				7761FBB729E4D7E700D9229C /* Shared */,
 				77EAD7B229C6BD7F0001B965 /* ContasPagas.xcdatamodeld */,
-				77EAD7AD29C6BD7F0001B965 /* Preview Content */,
+				77664AD129D36E1000A407A1 /* ContasPagas.entitlements */,
 				770E1D3129C6C2A600854ECA /* .swiftlint.yml */,
 			);
 			path = ContasPagas;
-			sourceTree = "<group>";
-		};
-		77EAD7AD29C6BD7F0001B965 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				77EAD7AE29C6BD7F0001B965 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		77EAD7BD29C6BD7F0001B965 /* ContasPagasTests */ = {
@@ -222,11 +301,12 @@
 			};
 			buildConfigurationList = 77EAD79F29C6BD7D0001B965 /* Build configuration list for PBXProject "ContasPagas" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 77EAD79B29C6BD7D0001B965;
 			productRefGroup = 77EAD7A529C6BD7D0001B965 /* Products */;
@@ -246,7 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				770E1D3229C6C2A600854ECA /* .swiftlint.yml in Resources */,
-				77EAD7AF29C6BD7F0001B965 /* Preview Assets.xcassets in Resources */,
+				77484D0B29E6405900AEC21B /* Preview Content.xcassets in Resources */,
+				77B16BDF29E63A31007E8125 /* Localizable.strings in Resources */,
 				77EAD7AC29C6BD7F0001B965 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +375,8 @@
 			files = (
 				77EAD7B429C6BD7F0001B965 /* ContasPagas.xcdatamodeld in Sources */,
 				77EAD7B129C6BD7F0001B965 /* Persistence.swift in Sources */,
-				77EAD7AA29C6BD7D0001B965 /* ContentView.swift in Sources */,
+				77B16BE529E63E96007E8125 /* LocalizableStrings.swift in Sources */,
+				77EAD7AA29C6BD7D0001B965 /* LoginView.swift in Sources */,
 				77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +412,18 @@
 			targetProxy = 77EAD7C529C6BD7F0001B965 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		77B16BE129E63A31007E8125 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77B16BE029E63A31007E8125 /* pt-BR */,
+				77B16BE229E63A34007E8125 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		77EAD7CC29C6BD7F0001B965 /* Debug */ = {
@@ -455,15 +549,17 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ContasPagas/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ContasPagas/Resources/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 69Y77S7YQP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ContasPagas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,15 +583,17 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ContasPagas/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ContasPagas/Resources/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 69Y77S7YQP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ContasPagas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
