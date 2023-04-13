@@ -18,3 +18,8 @@
 "dashboard-tabbar-expense" = "Expense";
 "dashboard-tabbar-earnings" = "Earnings";
 "dashboard-tabbar-settings" = "Settings";
+
+// MARK: - BALANCE
+"dashboard-balance-yourBalance" = "Your current balance is:";
+"dashboard-balance-totalEarnings" = "Total earnings:";
+"dashboard-balance-totalExpenses" = "Total expenses";

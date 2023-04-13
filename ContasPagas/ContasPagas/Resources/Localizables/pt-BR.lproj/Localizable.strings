@@ -16,5 +16,10 @@
 
 "dashboard-tabbar-balance" = "Saldo";
 "dashboard-tabbar-expense" = "Despesa";
-"dashboard-tabbar-earnings" = "Earnings";
+"dashboard-tabbar-earnings" = "Ganhos";
 "dashboard-tabbar-settings" = "Configurações";
+
+// MARK: - BALANCE
+"dashboard-balance-yourBalance" = "Seu saldo atual é:";
+"dashboard-balance-totalEarnings" = "Total de ganhos:";
+"dashboard-balance-totalExpenses" = "Total de despesas:";

@@ -10,7 +10,7 @@ import SwiftUI
 struct DashboardTabBarView: View {
     var body: some View {
         TabView {
-            Text("Saldo")
+            BalanceView()
                 .tabItem {
                     Image(systemName: "dollarsign.circle.fill")
                     Text(LocalizableStrings.tabbarBalance.localized)

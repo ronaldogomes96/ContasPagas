@@ -22,6 +22,11 @@ enum LocalizableStrings: String {
     case tabbarEarnings = "dashboard-tabbar-earnings"
     case tabbarSettings = "dashboard-tabbar-settings"
     
+    // MARK: - BALANCE
+    case balanceYourBalance = "dashboard-balance-yourBalance"
+    case balanceTotalExpense = "dashboard-balance-totalExpenses"
+    case balanceTotalEarnings = "dashboard-balance-totalEarnings"
+    
     var localized: LocalizedStringKey {
         return LocalizedStringKey(self.rawValue)
     }
