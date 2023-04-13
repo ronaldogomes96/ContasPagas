@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		770E1D3229C6C2A600854ECA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 770E1D3129C6C2A600854ECA /* .swiftlint.yml */; };
 		77484D0B29E6405900AEC21B /* Preview Content.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77484D0A29E6405900AEC21B /* Preview Content.xcassets */; };
+		7779D69E29E77E7900B32CAE /* DashboardTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7779D69D29E77E7900B32CAE /* DashboardTabBarView.swift */; };
 		77B16BDF29E63A31007E8125 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77B16BE129E63A31007E8125 /* Localizable.strings */; };
 		77B16BE529E63E96007E8125 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B16BE429E63E96007E8125 /* LocalizableStrings.swift */; };
 		77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */; };
@@ -42,6 +43,7 @@
 		770E1D3129C6C2A600854ECA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		77484D0A29E6405900AEC21B /* Preview Content.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Content.xcassets"; sourceTree = "<group>"; };
 		77664AD129D36E1000A407A1 /* ContasPagas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContasPagas.entitlements; sourceTree = "<group>"; };
+		7779D69D29E77E7900B32CAE /* DashboardTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarView.swift; sourceTree = "<group>"; };
 		77B16BE029E63A31007E8125 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		77B16BE229E63A34007E8125 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77B16BE429E63E96007E8125 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
@@ -113,9 +115,18 @@
 		7761FBB929E4D80000D9229C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				7779D69C29E77D2400B32CAE /* Dashboard */,
 				77B16BDB29E63975007E8125 /* Login */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		7779D69C29E77D2400B32CAE /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				7779D69D29E77E7900B32CAE /* DashboardTabBarView.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		77B16BD629E5C147007E8125 /* Resources */ = {
@@ -376,6 +387,7 @@
 				77EAD7B429C6BD7F0001B965 /* ContasPagas.xcdatamodeld in Sources */,
 				77EAD7B129C6BD7F0001B965 /* Persistence.swift in Sources */,
 				77B16BE529E63E96007E8125 /* LocalizableStrings.swift in Sources */,
+				7779D69E29E77E7900B32CAE /* DashboardTabBarView.swift in Sources */,
 				77EAD7AA29C6BD7D0001B965 /* LoginView.swift in Sources */,
 				77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */,
 			);

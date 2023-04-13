@@ -6,7 +6,15 @@
   
 */
 
+// MARK: - LOGIN
+
 "login-appName" = "ContasPagas";
 "login-messageTitle" = "Log in and start managing your expenses";
 "login-button-title" = "Login";
 
+// MARK: - DASHBOARD
+
+"dashboard-tabbar-balance" = "Balance";
+"dashboard-tabbar-expense" = "Expense";
+"dashboard-tabbar-earnings" = "Earnings";
+"dashboard-tabbar-settings" = "Settings";
