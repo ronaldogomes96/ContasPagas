@@ -30,7 +30,7 @@ struct FinanceDetailsView: View {
         HStack {
             VStack(alignment: .leading, spacing: 8) {
                 Text(name)
-                    .font(.bold(.body)())
+                    .font(.bold(.title3)())
                 
                 Text("Data: \(date, formatter: dateFormatter)")
                 

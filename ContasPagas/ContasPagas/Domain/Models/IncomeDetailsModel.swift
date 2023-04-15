@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct IncomeDetailsModel: Codable {
+struct IncomeDetailsModel: Codable, Identifiable {
+    var id = UUID()
     let name: String
     let value: Double
     let date: Date
