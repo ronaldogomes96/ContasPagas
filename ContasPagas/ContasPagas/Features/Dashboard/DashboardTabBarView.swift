@@ -25,7 +25,7 @@ struct DashboardTabBarView: View {
                     Image(systemName: "minus.circle")
                     Text(LocalizableStrings.tabbarExpense.localized)
                 }
-            Text("Configurações")
+            Text(LocalizableStrings.tabbarSettings.localized)
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text(LocalizableStrings.tabbarSettings.localized)

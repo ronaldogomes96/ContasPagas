@@ -32,10 +32,10 @@ struct FinanceDetailsView: View {
                 Text(name)
                     .font(.bold(.title3)())
                 
-                Text("Data: \(date, formatter: dateFormatter)")
+                Text("\(LocalizableStrings.tradeFinanceDate.localizedString) \(date, formatter: dateFormatter)")
                 
                 if let paid {
-                    Text("Situação: \(paid ? "Pago" : "Não pago")")
+                    Text("\(LocalizableStrings.financeDetailsSituationLabel.localizedString) \(paid ? LocalizableStrings.tradeToglePayed.localizedString : LocalizableStrings.financeDetailsNotPaid.localizedString)")
                         .foregroundColor(paid ? .green : .red)
                 }
             }

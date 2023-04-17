@@ -27,6 +27,10 @@ enum LocalizableStrings: String {
     case balanceTotalExpense = "dashboard-balance-totalExpenses"
     case balanceTotalEarnings = "dashboard-balance-totalEarnings"
     
+    // MARK: - FINANCE DETAILS
+    case financeDetailsSituationLabel = "financeDetails-paid-situation"
+    case financeDetailsNotPaid = "financeDetails-paid-notPaid"
+    
     // MARK: - TRADE
     
     case tradeAddTitle = "trade-title-add"

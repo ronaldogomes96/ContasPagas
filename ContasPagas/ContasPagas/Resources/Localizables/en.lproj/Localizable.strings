@@ -40,3 +40,8 @@
 
 "trade-title-add" = "Add";
 "trade-title-edit" = "Edit";
+
+// MARK: - FINANCE DETAILS
+
+"financeDetails-paid-situation" = "Situation:";
+"financeDetails-paid-notPaid" = "Not paied";
