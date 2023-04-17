@@ -27,7 +27,17 @@ enum LocalizableStrings: String {
     case balanceTotalExpense = "dashboard-balance-totalExpenses"
     case balanceTotalEarnings = "dashboard-balance-totalEarnings"
     
+    // MARK: - TRADE
+    
+    case tradeAddTitle = "trade-title-add"
+    case tradeEditTitle = "trade-title-edit"
+    
     var localized: LocalizedStringKey {
         return LocalizedStringKey(self.rawValue)
     }
+    
+    var localizedString: String {
+        return NSLocalizedString(self.rawValue, comment: "")
+    }
 }
+

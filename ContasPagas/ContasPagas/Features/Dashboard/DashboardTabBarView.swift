@@ -15,12 +15,12 @@ struct DashboardTabBarView: View {
                     Image(systemName: "dollarsign.circle.fill")
                     Text(LocalizableStrings.tabbarBalance.localized)
                 }
-            Text("Ganhos")
+            IncomesView()
                 .tabItem {
                     Image(systemName: "plus.circle")
                     Text(LocalizableStrings.tabbarEarnings.localized)
                 }
-            Text("Despesas")
+            ExpensesView()
                 .tabItem {
                     Image(systemName: "minus.circle")
                     Text(LocalizableStrings.tabbarExpense.localized)
@@ -30,7 +30,10 @@ struct DashboardTabBarView: View {
                     Image(systemName: "gearshape")
                     Text(LocalizableStrings.tabbarSettings.localized)
                 }
+            
+            .toolbarBackground(Color.white, for: .tabBar)
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

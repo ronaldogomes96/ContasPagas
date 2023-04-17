@@ -11,7 +11,7 @@ struct ExpensesView: View {
     @StateObject var viewModel = ExpensesViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color(UIColor.systemGray6)
                 
@@ -23,20 +23,24 @@ struct ExpensesView: View {
                         .foregroundColor(viewModel.getTotalExpensesValue().isZero ? .black : .red)
                     
                     List {
-                        ForEach(viewModel.expensesDetails) {
-                            FinanceDetailsView(name: $0.name,
-                                               date: $0.date,
-                                               value: $0.value,
-                                               paid: $0.paid)
+                        ForEach(viewModel.expensesDetails) { expense in
+                            NavigationLink(destination: buildTradeView(type: .edit)) {
+                                FinanceDetailsView(name: expense.name,
+                                                   date: expense.date,
+                                                   value: expense.value,
+                                                   paid: expense.paid)
+                            }
                         }
                         
                         ForEach(viewModel.expensesType) { expenseType in
                             Section(header: Text(expenseType.name)) {
-                                ForEach(expenseType.expenses) {
-                                    FinanceDetailsView(name: $0.name,
-                                                       date: $0.date,
-                                                       value: $0.value,
-                                                       paid: $0.paid)
+                                ForEach(expenseType.expenses) { expense in
+                                    NavigationLink(destination: buildTradeView(type: .edit)) {
+                                        FinanceDetailsView(name: expense.name,
+                                                           date: expense.date,
+                                                           value: expense.value,
+                                                           paid: expense.paid)
+                                    }
                                 }
                             }
                         }
@@ -47,7 +51,7 @@ struct ExpensesView: View {
             .navigationBarTitle("Despesas")
             .navigationBarTitleDisplayMode(.large)
             .navigationBarItems(trailing:
-                                    NavigationLink(destination: Text("Tela de detalhes")) {
+                                    NavigationLink(destination: buildTradeView(type: .add)) {
                 Image(systemName: "plus")
                     .font(.title)
                     .foregroundColor(.blue)
@@ -57,6 +61,12 @@ struct ExpensesView: View {
         .onAppear {
             viewModel.fecthExpenses()
         }
+    }
+    
+    @ViewBuilder private func buildTradeView(type: TradeType) -> some View {
+        let viewModel = TradeViewModel(tradeType: type,
+                                       financeType: .expense)
+        TradeView(viewModel: viewModel)
     }
 }
 

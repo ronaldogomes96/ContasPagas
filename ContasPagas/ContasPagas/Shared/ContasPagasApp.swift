@@ -13,8 +13,13 @@ struct ContasPagasApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationStack {
+                if KeysService.get(.sessionID) == nil {
+                    LoginView(viewModel: LoginViewModel())
+                } else {
+                    DashboardTabBarView()
+                }
+            }
         }
     }
 }

@@ -10,7 +10,7 @@
 
 "login-appName" = "ContasPagas";
 "login-messageTitle" = "Inicie sua sessão e comece a gerenciar suas despesas";
-"login-button-title" = "Login";
+"login-button-title" = "Sessão Local";
 
 // MARK: - DASHBOARD
 
@@ -23,3 +23,8 @@
 "dashboard-balance-yourBalance" = "Seu saldo atual é:";
 "dashboard-balance-totalEarnings" = "Total de ganhos:";
 "dashboard-balance-totalExpenses" = "Total de despesas:";
+
+// MARK: - ADD OR EDIT
+
+"trade-title-add" = "Adicionar";
+"trade-title-edit" = "Editar";

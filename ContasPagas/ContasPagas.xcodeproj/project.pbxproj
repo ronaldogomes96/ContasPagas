@@ -12,6 +12,12 @@
 		775902AA29E8B8C400822DCA /* FinanceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775902A929E8B8C400822DCA /* FinanceDetailsView.swift */; };
 		7779D69E29E77E7900B32CAE /* DashboardTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7779D69D29E77E7900B32CAE /* DashboardTabBarView.swift */; };
 		7779D6A129E7882900B32CAE /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7779D6A029E7882900B32CAE /* BalanceView.swift */; };
+		779A998629ED62C60098902E /* LoginServiceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A998529ED62C60098902E /* LoginServiceKey.swift */; };
+		779A998829ED63B70098902E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A998729ED63B70098902E /* LoginViewModel.swift */; };
+		779A998B29ED670D0098902E /* TradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A998A29ED670D0098902E /* TradeView.swift */; };
+		779A998D29ED67190098902E /* TradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A998C29ED67190098902E /* TradeViewModel.swift */; };
+		779A998F29ED678D0098902E /* FinanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A998E29ED678D0098902E /* FinanceType.swift */; };
+		779A999129ED71390098902E /* TradeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A999029ED71390098902E /* TradeType.swift */; };
 		77B16BDF29E63A31007E8125 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77B16BE129E63A31007E8125 /* Localizable.strings */; };
 		77B16BE529E63E96007E8125 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B16BE429E63E96007E8125 /* LocalizableStrings.swift */; };
 		77B767A829E9A93300746A54 /* ExpenseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B767A729E9A93300746A54 /* ExpenseType.swift */; };
@@ -56,6 +62,12 @@
 		77664AD129D36E1000A407A1 /* ContasPagas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContasPagas.entitlements; sourceTree = "<group>"; };
 		7779D69D29E77E7900B32CAE /* DashboardTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarView.swift; sourceTree = "<group>"; };
 		7779D6A029E7882900B32CAE /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		779A998529ED62C60098902E /* LoginServiceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceKey.swift; sourceTree = "<group>"; };
+		779A998729ED63B70098902E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		779A998A29ED670D0098902E /* TradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeView.swift; sourceTree = "<group>"; };
+		779A998C29ED67190098902E /* TradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewModel.swift; sourceTree = "<group>"; };
+		779A998E29ED678D0098902E /* FinanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceType.swift; sourceTree = "<group>"; };
+		779A999029ED71390098902E /* TradeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeType.swift; sourceTree = "<group>"; };
 		77B16BE029E63A31007E8125 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		77B16BE229E63A34007E8125 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77B16BE429E63E96007E8125 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
@@ -144,6 +156,7 @@
 		7761FBB929E4D80000D9229C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				779A998929ED66C50098902E /* Trade */,
 				7779D69C29E77D2400B32CAE /* Dashboard */,
 				77B16BDB29E63975007E8125 /* Login */,
 			);
@@ -168,6 +181,16 @@
 				7779D6A029E7882900B32CAE /* BalanceView.swift */,
 			);
 			path = Balance;
+			sourceTree = "<group>";
+		};
+		779A998929ED66C50098902E /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				779A998A29ED670D0098902E /* TradeView.swift */,
+				779A998C29ED67190098902E /* TradeViewModel.swift */,
+				779A999029ED71390098902E /* TradeType.swift */,
+			);
+			path = Trade;
 			sourceTree = "<group>";
 		};
 		77B16BD629E5C147007E8125 /* Resources */ = {
@@ -200,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				77EAD7B029C6BD7F0001B965 /* Persistence.swift */,
+				779A998529ED62C60098902E /* LoginServiceKey.swift */,
 			);
 			path = Persistance;
 			sourceTree = "<group>";
@@ -208,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				77EAD7A929C6BD7D0001B965 /* LoginView.swift */,
+				779A998729ED63B70098902E /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -227,6 +252,7 @@
 				77B767A929E9A9C400746A54 /* ExpenseDetailsModel.swift */,
 				77B767AB29E9B4E200746A54 /* IncomeDetailsModel.swift */,
 				77B767AD29E9D12000746A54 /* ExpensesModel.swift */,
+				779A998E29ED678D0098902E /* FinanceType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -457,18 +483,24 @@
 				77EAD7B429C6BD7F0001B965 /* ContasPagas.xcdatamodeld in Sources */,
 				77EAD7B129C6BD7F0001B965 /* Persistence.swift in Sources */,
 				77B767AE29E9D12000746A54 /* ExpensesModel.swift in Sources */,
+				779A998D29ED67190098902E /* TradeViewModel.swift in Sources */,
 				77B16BE529E63E96007E8125 /* LocalizableStrings.swift in Sources */,
 				77B767AA29E9A9C400746A54 /* ExpenseDetailsModel.swift in Sources */,
 				77B767BD29EB02C800746A54 /* IncomesView.swift in Sources */,
+				779A998B29ED670D0098902E /* TradeView.swift in Sources */,
 				77B767AC29E9B4E200746A54 /* IncomeDetailsModel.swift in Sources */,
 				7779D69E29E77E7900B32CAE /* DashboardTabBarView.swift in Sources */,
+				779A998829ED63B70098902E /* LoginViewModel.swift in Sources */,
 				77EAD7AA29C6BD7D0001B965 /* LoginView.swift in Sources */,
 				775902AA29E8B8C400822DCA /* FinanceDetailsView.swift in Sources */,
 				77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */,
 				7779D6A129E7882900B32CAE /* BalanceView.swift in Sources */,
 				77B767B329E9FCF200746A54 /* ExpensesViewModel.swift in Sources */,
 				77B767BB29EB013600746A54 /* IncomesViewModel.swift in Sources */,
+				779A998629ED62C60098902E /* LoginServiceKey.swift in Sources */,
 				77B767A829E9A93300746A54 /* ExpenseType.swift in Sources */,
+				779A998F29ED678D0098902E /* FinanceType.swift in Sources */,
+				779A999129ED71390098902E /* TradeType.swift in Sources */,
 				77B767B129E9DDCE00746A54 /* ExpensesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

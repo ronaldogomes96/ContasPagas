@@ -11,7 +11,7 @@ struct IncomesView: View {
     @StateObject var viewModel = IncomesViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color(UIColor.systemGray6)
                 
@@ -36,7 +36,7 @@ struct IncomesView: View {
             .navigationBarTitle("Receitas")
             .navigationBarTitleDisplayMode(.large)
             .navigationBarItems(trailing:
-                                    NavigationLink(destination: Text("Tela de detalhes")) {
+                                    NavigationLink(destination: buildTradeView(type: .add)) {
                 Image(systemName: "plus")
                     .font(.title)
                     .foregroundColor(.blue)
@@ -46,6 +46,12 @@ struct IncomesView: View {
         .onAppear {
             viewModel.fetchIncomes()
         }
+    }
+    
+    @ViewBuilder private func buildTradeView(type: TradeType) -> some View {
+        let viewModel = TradeViewModel(tradeType: type,
+                                       financeType: .income)
+        TradeView(viewModel: viewModel)
     }
 }
 

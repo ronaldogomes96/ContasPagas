@@ -10,16 +10,21 @@
 
 "login-appName" = "ContasPagas";
 "login-messageTitle" = "Log in and start managing your expenses";
-"login-button-title" = "Login";
+"login-button-title" = "Local Session";
 
 // MARK: - DASHBOARD
 
 "dashboard-tabbar-balance" = "Balance";
 "dashboard-tabbar-expense" = "Expense";
-"dashboard-tabbar-earnings" = "Earnings";
+"dashboard-tabbar-earnings" = "Incomes";
 "dashboard-tabbar-settings" = "Settings";
 
 // MARK: - BALANCE
 "dashboard-balance-yourBalance" = "Your current balance is:";
 "dashboard-balance-totalEarnings" = "Total earnings:";
 "dashboard-balance-totalExpenses" = "Total expenses";
+
+// MARK: - EDIT
+
+"trade-title-add" = "Add";
+"trade-title-edit" = "Edit";

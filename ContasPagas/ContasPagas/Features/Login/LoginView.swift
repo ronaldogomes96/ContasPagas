@@ -9,38 +9,39 @@ import SwiftUI
 import AuthenticationServices
 
 struct LoginView: View {
-    @Environment(\.colorScheme) var colorScheme
+    @ObservedObject var viewModel: LoginViewModel
 
     var body: some View {
-        VStack(spacing: 58) {
-            Image("Logo_levi")
-                .frame(width: 170, height: 170)
-                .background(Color.blue)
-                .clipShape(Circle())
-            
-            Text(LocalizableStrings.appName.localized)
-                .font(.largeTitle)
+        NavigationStack {
+            VStack(spacing: 58) {
+                Text(LocalizableStrings.appName.localized)
+                    .font(.largeTitle)
 
-            Text(LocalizableStrings.loginMessageTitle.localized)
-                .font(.title2)
-                .multilineTextAlignment(.center)
-            
-            Button(action: {
-                print("Navigate to login")
-            }) {
-                Text(LocalizableStrings.loginButtonTitle.localized)
-                    .foregroundColor(.white)
+                Text(LocalizableStrings.loginMessageTitle.localized)
+                    .font(.title2)
+                    .multilineTextAlignment(.center)
+                
+                NavigationLink {
+                    DashboardTabBarView()
+                        .onAppear {
+                            viewModel.startNewSession()
+                        }
+                } label: {
+                    Text(LocalizableStrings.loginButtonTitle.localized)
+                        .bold()
+                        .padding(4)
+                        .frame(maxWidth: .infinity)
+                        .cornerRadius(10)
+                }
+                .buttonStyle(.borderedProminent)
             }
-            .frame(maxWidth: .infinity, maxHeight: 42)
-            .background(Color.black)
-            .cornerRadius(10)
+            .padding(24)
         }
-        .padding(24)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(viewModel: LoginViewModel())
     }
 }
