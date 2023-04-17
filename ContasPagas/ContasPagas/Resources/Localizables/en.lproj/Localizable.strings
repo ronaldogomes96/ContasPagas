@@ -24,7 +24,19 @@
 "dashboard-balance-totalEarnings" = "Total earnings:";
 "dashboard-balance-totalExpenses" = "Total expenses";
 
-// MARK: - EDIT
+// MARK: - TRADE
+
+"trade-textfield-type" = "Finance type";
+"trade-textfield-financeType" = "Finance name";
+"trade-textfield-value" = "Finance name";
+"trade-datapicker-date" = "Date: ";
+"trade-togle-payed" = "Paied";
+"trade-alert-title" = "Ocorreu um erro";
+"trade-alert-message" = "Não foi possivel salvar os dados, tente novamente";
+"trade-dismissButton" = "OK";
+"trade-save-button" = "Save";
+
+// MARK: - TRADE EDIT
 
 "trade-title-add" = "Add";
 "trade-title-edit" = "Edit";

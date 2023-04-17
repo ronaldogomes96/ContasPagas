@@ -19,37 +19,42 @@ struct TradeView: View {
                 Color(UIColor.systemGray6)
                 
                 VStack(spacing: 24) {
-                    TextField("Tipo de finança", text: $viewModel.financeTypeName)
+                    TextField(LocalizableStrings.tradeFinanceType.localized,
+                              text: $viewModel.financeTypeName)
                         .textFieldStyle(.roundedBorder)
                     
-                    TextField("Nome da finança", text: $viewModel.financeName)
+                    TextField(LocalizableStrings.tradeFinanceName.localized,
+                              text: $viewModel.financeName)
                         .textFieldStyle(.roundedBorder)
                     
-                    TextField("Valor da finança", text: $viewModel.tradeValue)
+                    TextField(LocalizableStrings.tradeFinanceValue.localized,
+                              text: $viewModel.tradeValue)
                         .keyboardType(.numberPad)
                         .textFieldStyle(.roundedBorder)
                     
-                    DatePicker("Data: ",
+                    DatePicker(LocalizableStrings.tradeFinanceDate.localized,
                                selection: $viewModel.selectedDate,
                                displayedComponents: [.date])
                     
                     if viewModel.financeType == .expense {
-                        Toggle("Pago", isOn: $isPaied)
+                        Toggle(LocalizableStrings.tradeToglePayed.localized,
+                               isOn: $isPaied)
                     }
                     
                     Spacer()
                 }
                 .padding()
                 .alert(isPresented: $showAlert) {
-                    Alert(title: Text("Ocorreu um erro"),
-                          message: Text("Não foi possivel salvar os dados, tente novamente"),
-                          dismissButton: .default(Text("OK")))
+                    Alert(title: Text(LocalizableStrings.tradeAlertTitle.localized),
+                          message: Text(LocalizableStrings.tradeAlertMessage.localized),
+                          dismissButton: .default(
+                            Text(LocalizableStrings.tradeDismissButton.localized)))
                 }
             }
             .navigationBarTitle("\(viewModel.tradeType.titleName) \(viewModel.financeType.rawValue)")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
-                Button("Salvar") {
+                Button(LocalizableStrings.tradeSavenButton.localized) {
                     if viewModel.saveTradeWithSuccess() {
                         
                     } else {

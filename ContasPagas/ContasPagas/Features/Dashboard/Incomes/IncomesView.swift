@@ -33,7 +33,7 @@ struct IncomesView: View {
                     .scrollIndicators(.hidden)
                 }
             }
-            .navigationBarTitle("Receitas")
+            .navigationBarTitle(LocalizableStrings.tabbarEarnings.localized)
             .navigationBarTitleDisplayMode(.large)
             .navigationBarItems(trailing:
                                     NavigationLink(destination: buildTradeView(type: .add)) {

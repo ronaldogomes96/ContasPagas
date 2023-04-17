@@ -16,13 +16,25 @@
 
 "dashboard-tabbar-balance" = "Saldo";
 "dashboard-tabbar-expense" = "Despesa";
-"dashboard-tabbar-earnings" = "Ganhos";
+"dashboard-tabbar-earnings" = "Receitas";
 "dashboard-tabbar-settings" = "Configurações";
 
 // MARK: - BALANCE
 "dashboard-balance-yourBalance" = "Seu saldo atual é:";
 "dashboard-balance-totalEarnings" = "Total de ganhos:";
 "dashboard-balance-totalExpenses" = "Total de despesas:";
+
+// MARK: - TRADE
+
+"trade-textfield-type" = "Tipo de finança";
+"trade-textfield-financeType" = "Nome de finança";
+"trade-textfield-value" = "Valor da finança";
+"trade-datapicker-date" = "Data: ";
+"trade-togle-payed" = "Pago";
+"trade-alert-title" = "Ocorreu um erro";
+"trade-alert-message" = "Não foi possivel salvar os dados, tente novamente";
+"trade-dismissButton" = "OK";
+"trade-save-button" = "Salvar";
 
 // MARK: - ADD OR EDIT
 

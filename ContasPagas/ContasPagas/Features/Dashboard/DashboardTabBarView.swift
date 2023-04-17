@@ -30,9 +30,9 @@ struct DashboardTabBarView: View {
                     Image(systemName: "gearshape")
                     Text(LocalizableStrings.tabbarSettings.localized)
                 }
-            
-            .toolbarBackground(Color.white, for: .tabBar)
         }
+        .toolbar(.visible, for: .tabBar)
+        .toolbarBackground(Color.white, for: .tabBar)
         .navigationBarBackButtonHidden()
     }
 }

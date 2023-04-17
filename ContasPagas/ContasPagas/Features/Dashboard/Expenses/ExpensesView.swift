@@ -48,7 +48,7 @@ struct ExpensesView: View {
                     .scrollIndicators(.hidden)
                 }
             }
-            .navigationBarTitle("Despesas")
+            .navigationBarTitle(LocalizableStrings.tabbarExpense.localized)
             .navigationBarTitleDisplayMode(.large)
             .navigationBarItems(trailing:
                                     NavigationLink(destination: buildTradeView(type: .add)) {

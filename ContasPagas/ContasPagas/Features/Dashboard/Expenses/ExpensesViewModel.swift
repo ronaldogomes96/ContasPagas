@@ -18,12 +18,13 @@ class ExpensesViewModel: ObservableObject {
                                                 date: Date(),
                                                 paid: true)
         let expenseModel = ExpensesModel(expenses: [expenseDetail,
-                                                           ExpenseDetailsModel(name: "Uber",
-                                                                               value: 20,
-                                                                               date: Date(),
-                                                                               paid: false)],
-                                                expensesType: [ExpenseType(name: "Transporte",
-                                                                           expenses: [expenseDetail, expenseDetail])])
+                                                    ExpenseDetailsModel(name: "Uber",
+                                                                        value: 20,
+                                                                        date: Date(),
+                                                                        paid: false)],
+                                         expensesType: [ExpenseType(name: "Transporte",
+                                                                    expenses: [expenseDetail,
+                                                                               expenseDetail])])
         
         expensesDetails = expenseModel.expenses + expenseModel.expenses + expenseModel.expenses + expenseModel.expenses
         expensesType = expenseModel.expensesType
