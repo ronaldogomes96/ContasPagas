@@ -16,7 +16,12 @@ class TradeViewModel: ObservableObject {
     @State var tradeValue = ""
     @State var selectedDate = Date()
     
-    init(tradeType: TradeType, financeType: FinanceType, financeName: String = "", financeTypeName: String = "", tradeValue: String = "", selectedDate: Date = Date()) {
+    init(tradeType: TradeType,
+         financeType: FinanceType,
+         financeName: String = "",
+         financeTypeName: String = "",
+         tradeValue: String = "",
+         selectedDate: Date = Date()) {
         self.tradeType = tradeType
         self.financeType = financeType
         self.financeName = financeName

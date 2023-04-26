@@ -7,9 +7,10 @@
 
 import SwiftUI
 import AuthenticationServices
+import GoogleSignInSwift
 
 struct LoginView: View {
-    @ObservedObject var viewModel: LoginViewModel
+    @ObservedObject var viewModel: AuthenticationViewModel
 
     var body: some View {
         NavigationStack {
@@ -21,19 +22,9 @@ struct LoginView: View {
                     .font(.title2)
                     .multilineTextAlignment(.center)
                 
-                NavigationLink {
-                    DashboardTabBarView()
-                        .onAppear {
-                            viewModel.startNewSession()
-                        }
-                } label: {
-                    Text(LocalizableStrings.loginButtonTitle.localized)
-                        .bold()
-                        .padding(4)
-                        .frame(maxWidth: .infinity)
-                        .cornerRadius(10)
+                GoogleSignInButton(style: .wide) {
+                    viewModel.signInUser()
                 }
-                .buttonStyle(.borderedProminent)
             }
             .padding(24)
         }
@@ -42,6 +33,6 @@ struct LoginView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewModel: LoginViewModel())
+        LoginView(viewModel: AuthenticationViewModel())
     }
 }
