@@ -24,6 +24,8 @@ class AuthenticationViewModel: ObservableObject {
             GIDSignIn.sharedInstance.restorePreviousSignIn { [weak self] user, error in
                 self?.authenticate(user, with: error)
             }
+        } else {
+            userLoginState = .signedOut
         }
     }
     
@@ -63,7 +65,7 @@ class AuthenticationViewModel: ObservableObject {
         
         let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken.tokenString)
         
-        Auth.auth().signIn(with: credential) { [weak self] (_, error) in
+        Auth.auth().signIn(with: credential) { [weak self] (user, error) in
             if let error = error {
                 self?.userLoginState = .signedError
                 return

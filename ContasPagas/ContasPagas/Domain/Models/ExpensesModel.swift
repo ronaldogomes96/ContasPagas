@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ExpensesModel {
+struct ExpensesModel: Codable {
     let expenses: [ExpenseDetailsModel]
     let expensesType: [ExpenseType]
 }
