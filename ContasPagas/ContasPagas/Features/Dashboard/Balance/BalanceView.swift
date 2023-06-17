@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BalanceView: View {
+    @StateObject var viewModel: BalanceViewModel
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -17,7 +19,7 @@ struct BalanceView: View {
                     Text(LocalizableStrings.balanceYourBalance.localized)
                         .font(.title)
                     
-                    Text("R$ 50,00")
+                    Text("\($viewModel.totalBalance.wrappedValue)")
                         .font(.bold(.largeTitle)())
                         .foregroundColor(.green)
                     
@@ -27,7 +29,7 @@ struct BalanceView: View {
                             
                             Spacer()
                             
-                            Text("R$ 100")
+                            Text("\($viewModel.totalIncomes.wrappedValue)")
                                 .foregroundColor(.green)
                         }
                         
@@ -36,7 +38,7 @@ struct BalanceView: View {
                             
                             Spacer()
                             
-                            Text("R$ 50")
+                            Text("\($viewModel.totalExpenses.wrappedValue)")
                                 .foregroundColor(.red)
                         }
                     }
@@ -47,12 +49,16 @@ struct BalanceView: View {
             }
             .navigationTitle(LocalizableStrings.tabbarBalance.localized)
             .navigationBarTitleDisplayMode(.large)
+            .task {
+                await viewModel.getUserInformations()
+            }
         }
     }
 }
 
 struct BalanceView_Previews: PreviewProvider {
     static var previews: some View {
-        BalanceView()
+        Text("")
+//        BalanceView(viewModel: BalanceViewModel(incomeUseCase: <#T##any FinancesUseCaseProtocol#>, expenseTypeUseCase: <#T##any FinancesUseCaseProtocol#>, expensesUseCase: <#T##any FinancesUseCaseProtocol#>))
     }
 }

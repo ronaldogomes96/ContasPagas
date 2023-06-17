@@ -7,12 +7,28 @@
 
 import Foundation
 
+@MainActor
 class IncomesViewModel: ObservableObject {
     @Published var incomesDetails = [IncomeDetailsModel]()
+    @Published var hasError: Bool = false
+    private var incomesUseCase: any FinancesUseCaseProtocol
     
-    func fetchIncomes() {
-        let incomeDetails = IncomeDetailsModel(name: "Salario", value: 1000, date: Date())
-        incomesDetails = [incomeDetails, incomeDetails, incomeDetails]
+    init(incomesUseCase: any FinancesUseCaseProtocol) {
+        self.incomesUseCase = incomesUseCase
+    }
+    
+    func fetchIncomes() async {
+        do {
+            guard let incomesDetails = try await incomesUseCase.readAll() as? [IncomeDetailsModel] else {
+                hasError = true
+                return
+            }
+            
+            self.incomesDetails = incomesDetails
+            hasError = false
+        } catch {
+            hasError = true
+        }
     }
     
     func getTotalIncomesValue() -> Double {

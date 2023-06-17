@@ -14,36 +14,40 @@ class RepositoryManager {
     static let shared = RepositoryManager()
     private let firebaseService = FirebaseService()
     
-    func createNewUser(_ user: UserModel) async throws -> Void {
+    func createNewUser(_ user: UserModel) async throws {
         try await firebaseService.createUser(user)
         
-        userModel = user
+        RepositoryManager.shared.userModel = user
     }
     
-    func readUserModel() async throws -> UserModel? {
-        let userModel = try await firebaseService.readUser()
+    func readUserModel(with id: String? = RepositoryManager.shared.userModel?.userId) async throws -> UserModel? {
+        guard let id else {
+            fatalError("User Model has no document ID.")
+        }
+        
+        let userModel = try await firebaseService.readUser(with: id)
         
         guard let userModel = userModel.first else {
             return nil
         }
         
-        self.userModel = userModel
+        RepositoryManager.shared.userModel = userModel
         return userModel
     }
     
-    func updateUser(_ user: UserModel) async throws -> Void {
+    func updateUser(_ user: UserModel) async throws {
         try await firebaseService.updateUser(user)
         
-        userModel = user
+        RepositoryManager.shared.userModel = user
     }
     
-    func deleteUser(_ user: UserModel) async throws -> Void {
+    func deleteUser(_ user: UserModel) async throws {
         try await firebaseService.deleteUser(user)
         
-        userModel = nil
+        RepositoryManager.shared.userModel = nil
     }
     
     func actualUserModel() -> UserModel? {
-        return userModel
+        return RepositoryManager.shared.userModel
     }
 }

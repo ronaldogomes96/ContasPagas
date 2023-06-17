@@ -12,12 +12,12 @@ import FirebaseFirestore
 struct FirebaseService {
     private let database = Firestore.firestore().collection(UserModel.collectionName)
     
-    func createUser(_ user: UserModel) async throws -> Void {
+    func createUser(_ user: UserModel) async throws {
         try database.addDocument(from: user)
     }
     
-    func readUser() async throws -> [UserModel] {
-        let query = try await database.getDocuments()
+    func readUser(with id: String) async throws -> [UserModel] {
+        let query = try await database.whereField("userId", isEqualTo: id).getDocuments()
         
         let userModel = try query.documents.compactMap { userModel -> UserModel in
             return try userModel.data(as: UserModel.self)
@@ -26,18 +26,18 @@ struct FirebaseService {
         return userModel
     }
     
-    func updateUser(_ user: UserModel) async throws -> Void {
-        guard let documentId = user.id else {
+    func updateUser(_ user: UserModel) async throws {
+        guard let userId = user.id else {
             fatalError("User Model \(user.name) has no document ID.")
         }
         
         try database
-            .document(documentId)
+            .document(userId)
             .setData(from: user,
                      merge: true)
     }
     
-    func deleteUser(_ user: UserModel) async throws -> Void {
+    func deleteUser(_ user: UserModel) async throws {
         guard let documentId = user.id else {
             fatalError("User Model \(user.name) has no document ID.")
         }

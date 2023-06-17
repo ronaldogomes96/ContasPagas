@@ -18,6 +18,10 @@
 		773C44072A2C1C0B000C5175 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 773C44062A2C1C0B000C5175 /* FirebaseFirestoreSwift */; };
 		773C440A2A2C263A000C5175 /* RepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C44092A2C263A000C5175 /* RepositoryManager.swift */; };
 		773C440C2A2C26C5000C5175 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C440B2A2C26C5000C5175 /* FirebaseService.swift */; };
+		773C440F2A2D000A000C5175 /* IncomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C440E2A2D000A000C5175 /* IncomeUseCase.swift */; };
+		773C44112A2D1947000C5175 /* ExpenseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C44102A2D1947000C5175 /* ExpenseUseCase.swift */; };
+		773C44132A2D1BB4000C5175 /* ExpensesTypeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C44122A2D1BB4000C5175 /* ExpensesTypeUseCase.swift */; };
+		773C44152A2D1EFF000C5175 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C44142A2D1EFF000C5175 /* BalanceViewModel.swift */; };
 		77484D0B29E6405900AEC21B /* Preview Content.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77484D0A29E6405900AEC21B /* Preview Content.xcassets */; };
 		775902AA29E8B8C400822DCA /* FinanceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775902A929E8B8C400822DCA /* FinanceDetailsView.swift */; };
 		7779D69E29E77E7900B32CAE /* DashboardTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7779D69D29E77E7900B32CAE /* DashboardTabBarView.swift */; };
@@ -70,6 +74,10 @@
 		773C44012A2BA716000C5175 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		773C44092A2C263A000C5175 /* RepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryManager.swift; sourceTree = "<group>"; };
 		773C440B2A2C26C5000C5175 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		773C440E2A2D000A000C5175 /* IncomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeUseCase.swift; sourceTree = "<group>"; };
+		773C44102A2D1947000C5175 /* ExpenseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUseCase.swift; sourceTree = "<group>"; };
+		773C44122A2D1BB4000C5175 /* ExpensesTypeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTypeUseCase.swift; sourceTree = "<group>"; };
+		773C44142A2D1EFF000C5175 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
 		77484D0A29E6405900AEC21B /* Preview Content.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Content.xcassets"; sourceTree = "<group>"; };
 		775902A929E8B8C400822DCA /* FinanceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceDetailsView.swift; sourceTree = "<group>"; };
 		77664AD129D36E1000A407A1 /* ContasPagas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContasPagas.entitlements; sourceTree = "<group>"; };
@@ -150,6 +158,16 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		773C440D2A2CFFF4000C5175 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				773C440E2A2D000A000C5175 /* IncomeUseCase.swift */,
+				773C44102A2D1947000C5175 /* ExpenseUseCase.swift */,
+				773C44122A2D1BB4000C5175 /* ExpensesTypeUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		77484D0929E6404400AEC21B /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +197,7 @@
 		7761FBB829E4D7F100D9229C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				773C440D2A2CFFF4000C5175 /* UseCases */,
 				77B767A629E9A92000746A54 /* Models */,
 				77B16BE329E63E83007E8125 /* Localizable */,
 				77B16BDA29E5C3B7007E8125 /* Persistance */,
@@ -212,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				7779D6A029E7882900B32CAE /* BalanceView.swift */,
+				773C44142A2D1EFF000C5175 /* BalanceViewModel.swift */,
 			);
 			path = Balance;
 			sourceTree = "<group>";
@@ -530,12 +550,15 @@
 				77EAD7B429C6BD7F0001B965 /* ContasPagas.xcdatamodeld in Sources */,
 				77EAD7B129C6BD7F0001B965 /* Persistence.swift in Sources */,
 				77B767AE29E9D12000746A54 /* ExpensesModel.swift in Sources */,
+				773C440F2A2D000A000C5175 /* IncomeUseCase.swift in Sources */,
 				773C440A2A2C263A000C5175 /* RepositoryManager.swift in Sources */,
 				779A998D29ED67190098902E /* TradeViewModel.swift in Sources */,
 				77B16BE529E63E96007E8125 /* LocalizableStrings.swift in Sources */,
 				77B767AA29E9A9C400746A54 /* ExpenseDetailsModel.swift in Sources */,
+				773C44132A2D1BB4000C5175 /* ExpensesTypeUseCase.swift in Sources */,
 				77B767BD29EB02C800746A54 /* IncomesView.swift in Sources */,
 				779A998B29ED670D0098902E /* TradeView.swift in Sources */,
+				773C44112A2D1947000C5175 /* ExpenseUseCase.swift in Sources */,
 				7739077529F96E25005C5785 /* AuthenticationViewModel.swift in Sources */,
 				773C440C2A2C26C5000C5175 /* FirebaseService.swift in Sources */,
 				77B767AC29E9B4E200746A54 /* IncomeDetailsModel.swift in Sources */,
@@ -547,6 +570,7 @@
 				7779D6A129E7882900B32CAE /* BalanceView.swift in Sources */,
 				77B767B329E9FCF200746A54 /* ExpensesViewModel.swift in Sources */,
 				77B767BB29EB013600746A54 /* IncomesViewModel.swift in Sources */,
+				773C44152A2D1EFF000C5175 /* BalanceViewModel.swift in Sources */,
 				77B767A829E9A93300746A54 /* ExpenseType.swift in Sources */,
 				779A998F29ED678D0098902E /* FinanceType.swift in Sources */,
 				779A999129ED71390098902E /* TradeType.swift in Sources */,

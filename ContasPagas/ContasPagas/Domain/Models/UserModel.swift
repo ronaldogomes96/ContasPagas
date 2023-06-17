@@ -9,11 +9,11 @@ import Foundation
 import FirebaseFirestoreSwift
 
 struct UserModel: Codable, Identifiable {
-    @DocumentID
-    var id: String?
+    @DocumentID var id: String?
+    var userId: String
     var name: String
     var email: String
-    var expenses: ExpensesModel
+    var expenseModel: ExpensesModel
     var incomes: [IncomeDetailsModel]
 }
 

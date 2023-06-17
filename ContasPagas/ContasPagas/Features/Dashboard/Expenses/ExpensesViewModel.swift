@@ -7,27 +7,35 @@
 
 import Foundation
 
+@MainActor
 class ExpensesViewModel: ObservableObject {
     @Published var expensesDetails = [ExpenseDetailsModel]()
     @Published var expensesType = [ExpenseType]()
+    @Published var hasError: Bool = false
     
-    func fecthExpenses() {
-        // atualizar expensesModel
-        let expenseDetail = ExpenseDetailsModel(name: "Uber",
-                                                value: 17.35,
-                                                date: Date(),
-                                                paid: true)
-        let expenseModel = ExpensesModel(expenses: [expenseDetail,
-                                                    ExpenseDetailsModel(name: "Uber",
-                                                                        value: 20,
-                                                                        date: Date(),
-                                                                        paid: false)],
-                                         expensesType: [ExpenseType(name: "Transporte",
-                                                                    expenses: [expenseDetail,
-                                                                               expenseDetail])])
-        
-        expensesDetails = expenseModel.expenses + expenseModel.expenses + expenseModel.expenses + expenseModel.expenses
-        expensesType = expenseModel.expensesType
+    private var expenseUseCase: any FinancesUseCaseProtocol
+    private var expenseTypeUseCase: any FinancesUseCaseProtocol
+    
+    init(expenseUseCase: any FinancesUseCaseProtocol,
+         expenseTypeUseCase: any FinancesUseCaseProtocol) {
+        self.expenseUseCase = expenseUseCase
+        self.expenseTypeUseCase = expenseTypeUseCase
+    }
+    
+    func fecthExpenses() async {
+        do {
+            guard let expenses = try await expenseUseCase.readAll() as? [ExpenseDetailsModel],
+                  let expensesType = try await expenseTypeUseCase.readAll() as? [ExpenseType] else {
+                hasError = true
+                return
+            }
+            
+            self.expensesDetails = expenses
+            self.expensesType = expensesType
+            hasError = false
+        } catch {
+            hasError = true
+        }
     }
     
     func getTotalExpensesValue() -> Double {

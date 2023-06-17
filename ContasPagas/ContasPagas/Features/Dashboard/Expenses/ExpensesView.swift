@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ExpensesView: View {
-    @StateObject var viewModel = ExpensesViewModel()
+    @StateObject var viewModel = ExpensesViewModel(expenseUseCase: ExpenseUseCase(repository: RepositoryManager.shared),
+                                                   expenseTypeUseCase: ExpensesTypeUseCase(repository: RepositoryManager.shared))
     
     var body: some View {
         NavigationStack {
@@ -58,14 +59,16 @@ struct ExpensesView: View {
                 }
             )
         }
-        .onAppear {
-            viewModel.fecthExpenses()
+        .task {
+            await viewModel.fecthExpenses()
         }
     }
     
     @ViewBuilder private func buildTradeView(type: TradeType) -> some View {
         let viewModel = TradeViewModel(tradeType: type,
-                                       financeType: .expense)
+                                       financeType: .expense,
+                                       incomeUseCase: IncomeUseCase(repository: RepositoryManager()),
+                                       expensesUseCase: ExpenseUseCase(repository: RepositoryManager()))
         TradeView(viewModel: viewModel)
     }
 }

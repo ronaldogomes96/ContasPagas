@@ -8,6 +8,6 @@
 import Foundation
 
 struct ExpensesModel: Codable {
-    let expenses: [ExpenseDetailsModel]
-    let expensesType: [ExpenseType]
+    var expenses: [ExpenseDetailsModel]
+    var expensesType: [ExpenseType]
 }

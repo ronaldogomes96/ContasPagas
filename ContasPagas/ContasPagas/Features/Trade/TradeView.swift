@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TradeView: View {
     @ObservedObject var viewModel: TradeViewModel
+    @Environment(\.dismiss) var dismiss
     
     @State private var isPaied: Bool = false
     @State private var showAlert = false
@@ -22,6 +23,7 @@ struct TradeView: View {
                     TextField(LocalizableStrings.tradeFinanceType.localized,
                               text: $viewModel.financeTypeName)
                         .textFieldStyle(.roundedBorder)
+                        .disabled(true)
                     
                     TextField(LocalizableStrings.tradeFinanceName.localized,
                               text: $viewModel.financeName)
@@ -55,10 +57,12 @@ struct TradeView: View {
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 Button(LocalizableStrings.tradeSavenButton.localized) {
-                    if viewModel.saveTradeWithSuccess() {
-                        
-                    } else {
-                        showAlert = true
+                    Task {
+                        if await viewModel.saveTradeWithSuccess() {
+                            dismiss()
+                        } else {
+                            showAlert = true
+                        }
                     }
                 }
             }
@@ -68,6 +72,9 @@ struct TradeView: View {
 
 struct TradeView_Previews: PreviewProvider {
     static var previews: some View {
-        TradeView(viewModel: TradeViewModel(tradeType: .edit, financeType: .expense))
+        TradeView(viewModel: TradeViewModel(tradeType: .edit,
+                                            financeType: .income,
+                                            incomeUseCase: IncomeUseCase(repository: RepositoryManager()),
+                                            expensesUseCase: ExpenseUseCase(repository: RepositoryManager())))
     }
 }

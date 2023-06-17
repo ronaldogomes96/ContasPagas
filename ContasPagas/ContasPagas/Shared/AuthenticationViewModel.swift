@@ -8,6 +8,7 @@
 import Firebase
 import GoogleSignIn
 
+@MainActor
 class AuthenticationViewModel: ObservableObject {
     
     enum LoginState {
@@ -18,11 +19,29 @@ class AuthenticationViewModel: ObservableObject {
     }
     
     @Published var userLoginState: LoginState = .loading
+    private let googleInstance = GIDSignIn.sharedInstance
+    private let firebaseAuth = Auth.auth()
+    private let repository = RepositoryManager.shared
     
     func checkUserLoginState() {
         if GIDSignIn.sharedInstance.hasPreviousSignIn() {
             GIDSignIn.sharedInstance.restorePreviousSignIn { [weak self] user, error in
-                self?.authenticate(user, with: error)
+                guard let self else {
+                    return
+                }
+                
+                if let currentUser = firebaseAuth.currentUser {
+                    Task {
+                        do {
+                            let _ = try await self.repository.readUserModel(with: currentUser.uid)
+                            self.userLoginState = .signedIn
+                        } catch {
+                            self.userLoginState = .signedOut
+                        }
+                    }
+                } else {
+                    userLoginState = .signedOut
+                }
             }
         } else {
             userLoginState = .signedOut
@@ -33,18 +52,20 @@ class AuthenticationViewModel: ObservableObject {
         guard let clientID = FirebaseApp.app()?.options.clientID ,
               let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let rootViewController = windowScene.windows.first?.rootViewController else {
+            userLoginState = .signedError
             return
         }
         
-        GIDSignIn.sharedInstance.configuration = GIDConfiguration(clientID: clientID)
+        googleInstance.configuration = GIDConfiguration(clientID: clientID)
         
-        GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController) { [weak self] result, error in
-            self?.authenticate(result?.user, with: error)
+        googleInstance.signIn(withPresenting: rootViewController) { [weak self] result, error in
+            self?.authenticate(result?.user,
+                               with: error)
         }
     }
     
     func signOut() {
-        GIDSignIn.sharedInstance.signOut()
+        googleInstance.signOut()
         
         do {
             try Auth.auth().signOut()
@@ -52,10 +73,12 @@ class AuthenticationViewModel: ObservableObject {
             userLoginState = .signedOut
         } catch {
             print(error.localizedDescription)
+            userLoginState = .signedError
         }
     }
     
-    private func authenticate(_ user: GIDGoogleUser?, with error: Error?) {
+    private func authenticate(_ user: GIDGoogleUser?,
+                              with error: Error?) {
         guard error == nil,
               let accessToken = user?.accessToken,
               let idToken = user?.idToken?.tokenString else {
@@ -63,15 +86,37 @@ class AuthenticationViewModel: ObservableObject {
             return
         }
         
-        let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken.tokenString)
+        let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                       accessToken: accessToken.tokenString)
         
         Auth.auth().signIn(with: credential) { [weak self] (user, error) in
-            if let error = error {
+            
+            guard let self = self,
+                  error == nil,
+                  let user = user?.user else {
                 self?.userLoginState = .signedError
                 return
             }
             
-            self?.userLoginState = .signedIn
+            Task {
+                await self.createUserModel(with: user)
+            }
+            
+        }
+    }
+    
+    private func createUserModel(with user: User) async {
+        do {
+            try await self.repository.createNewUser(UserModel(userId: user.uid, name: user.displayName ?? "",
+                                                              email: user.email ?? "",
+                                                              expenseModel: ExpensesModel(expenses: [],
+                                                                                          expensesType: []),
+                                                              incomes: []))
+            
+            self.userLoginState = .signedIn
+        } catch {
+            self.userLoginState = .signedError
+            return
         }
     }
 }
