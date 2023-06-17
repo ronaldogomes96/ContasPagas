@@ -10,6 +10,7 @@
 		7705965929EF110E00FEC372 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 7705965829EF110E00FEC372 /* GoogleSignIn */; };
 		7705965B29EF110E00FEC372 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7705965A29EF110E00FEC372 /* GoogleSignInSwift */; };
 		770E1D3229C6C2A600854ECA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 770E1D3129C6C2A600854ECA /* .swiftlint.yml */; };
+		77288BAC2A3D4E2100229122 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77288BAB2A3D4E2100229122 /* SettingsView.swift */; };
 		7739077129F96393005C5785 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7739077029F96393005C5785 /* FirebaseAuth */; };
 		7739077529F96E25005C5785 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7739077429F96E25005C5785 /* AuthenticationViewModel.swift */; };
 		773C44002A2BA429000C5175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 773C43FF2A2BA429000C5175 /* GoogleService-Info.plist */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		770E1D3129C6C2A600854ECA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		77288BAB2A3D4E2100229122 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7739077429F96E25005C5785 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		773C43FF2A2BA429000C5175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		773C44012A2BA716000C5175 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77288BAA2A3D4E0100229122 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				77288BAB2A3D4E2100229122 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		773C44032A2C1C0B000C5175 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +228,7 @@
 		7779D69C29E77D2400B32CAE /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				77288BAA2A3D4E0100229122 /* Settings */,
 				77B767B929EB012900746A54 /* Incomes */,
 				77B767AF29E9DDBF00746A54 /* Expenses */,
 				775902A829E8B8B300822DCA /* Components */,
@@ -565,6 +576,7 @@
 				773C44022A2BA716000C5175 /* UserModel.swift in Sources */,
 				7779D69E29E77E7900B32CAE /* DashboardTabBarView.swift in Sources */,
 				77EAD7AA29C6BD7D0001B965 /* LoginView.swift in Sources */,
+				77288BAC2A3D4E2100229122 /* SettingsView.swift in Sources */,
 				775902AA29E8B8C400822DCA /* FinanceDetailsView.swift in Sources */,
 				77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */,
 				7779D6A129E7882900B32CAE /* BalanceView.swift in Sources */,
