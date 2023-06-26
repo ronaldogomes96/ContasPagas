@@ -8,26 +8,30 @@
 import SwiftUI
 
 struct DashboardTabBarView: View {
+    private let viewFactory: ViewFactory
+    
+    init(viewFactory: ViewFactory) {
+        self.viewFactory = viewFactory
+    }
+    
     var body: some View {
         TabView {
-            BalanceView(viewModel: BalanceViewModel(incomeUseCase: IncomeUseCase(repository: RepositoryManager.shared),
-                                                    expenseTypeUseCase: ExpensesTypeUseCase(repository: RepositoryManager.shared),
-                                                    expensesUseCase: ExpenseUseCase(repository: RepositoryManager.shared)))
+            viewFactory.makeBalanceView()
                 .tabItem {
                     Image(systemName: "dollarsign.circle.fill")
                     Text(LocalizableStrings.tabbarBalance.localized)
                 }
-            IncomesView()
+            viewFactory.makeIncomesView()
                 .tabItem {
                     Image(systemName: "plus.circle")
                     Text(LocalizableStrings.tabbarEarnings.localized)
                 }
-            ExpensesView()
+            viewFactory.makeExpenseView()
                 .tabItem {
                     Image(systemName: "minus.circle")
                     Text(LocalizableStrings.tabbarExpense.localized)
                 }
-            Text(LocalizableStrings.tabbarSettings.localized)
+            viewFactory.makeSettingsView()
                 .tabItem {
                     Image(systemName: "gearshape")
                     Text(LocalizableStrings.tabbarSettings.localized)
@@ -41,6 +45,6 @@ struct DashboardTabBarView: View {
 
 struct DashboardTabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardTabBarView()
+        DashboardTabBarView(viewFactory: ViewFactory(viewModelFactory: ViewModelFactory()))
     }
 }

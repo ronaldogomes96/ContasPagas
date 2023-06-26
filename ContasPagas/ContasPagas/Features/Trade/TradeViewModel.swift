@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@MainActor
 class TradeViewModel: ObservableObject {
     
     var tradeType: TradeType
@@ -17,8 +16,8 @@ class TradeViewModel: ObservableObject {
     @Published var tradeValue = ""
     @Published var selectedDate = Date()
     @Published var isPaid = false
-    private let incomeUseCase: any FinancesUseCaseProtocol
-    private let expensesUseCase: any FinancesUseCaseProtocol
+    private let incomeUseCase: FinancesUseCaseProtocol
+    private let expensesUseCase: FinancesUseCaseProtocol
     
     init(tradeType: TradeType,
          financeType: FinanceType,
@@ -27,8 +26,8 @@ class TradeViewModel: ObservableObject {
          tradeValue: String = "",
          selectedDate: Date = Date(),
          isPaid: Bool = false,
-         incomeUseCase: any FinancesUseCaseProtocol,
-         expensesUseCase: any FinancesUseCaseProtocol) {
+         incomeUseCase: FinancesUseCaseProtocol,
+         expensesUseCase: FinancesUseCaseProtocol) {
         self.tradeType = tradeType
         self.financeType = financeType
         self.financeName = financeName

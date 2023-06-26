@@ -8,7 +8,6 @@
 import Firebase
 import GoogleSignIn
 
-@MainActor
 class AuthenticationViewModel: ObservableObject {
     
     enum LoginState {

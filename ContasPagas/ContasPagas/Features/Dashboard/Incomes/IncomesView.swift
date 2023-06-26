@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct IncomesView: View {
-    @StateObject var viewModel = IncomesViewModel(incomesUseCase: IncomeUseCase(repository: RepositoryManager.shared))
+    @StateObject private var viewModel: IncomesViewModel
+    private let viewFactory: ViewFactory
+    
+    init(viewModel: IncomesViewModel,
+         viewFactory: ViewFactory) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+        self.viewFactory = viewFactory
+    }
     
     var body: some View {
         NavigationStack {
@@ -36,7 +43,13 @@ struct IncomesView: View {
             .navigationBarTitle(LocalizableStrings.tabbarEarnings.localized)
             .navigationBarTitleDisplayMode(.large)
             .navigationBarItems(trailing:
-                                    NavigationLink(destination: buildTradeView(type: .add)) {
+                                    NavigationLink(destination: viewFactory.makeTradeView(tradeType: .add,
+                                                                                          financeType: .income,
+                                                                                          financeName: "",
+                                                                                          financeTypeName: "",
+                                                                                          tradeValue: "",
+                                                                                          selectedDate: Date(),
+                                                                                          isPaid: false)) {
                 Image(systemName: "plus")
                     .font(.title)
                     .foregroundColor(.blue)
@@ -47,18 +60,10 @@ struct IncomesView: View {
             await viewModel.fetchIncomes()
         }
     }
-    
-    @ViewBuilder private func buildTradeView(type: TradeType) -> some View {
-        let viewModel = TradeViewModel(tradeType: type,
-                                       financeType: .income,
-                                       incomeUseCase: IncomeUseCase(repository: RepositoryManager()),
-                                       expensesUseCase: ExpenseUseCase(repository: RepositoryManager()))
-        TradeView(viewModel: viewModel)
-    }
 }
 
 struct IncomesView_Previews: PreviewProvider {
     static var previews: some View {
-        IncomesView()
+        IncomesView(viewModel: IncomesViewModel(incomesUseCase: IncomeUseCase(repository: RepositoryManager.shared)), viewFactory: ViewFactory(viewModelFactory: ViewModelFactory()))
     }
 }

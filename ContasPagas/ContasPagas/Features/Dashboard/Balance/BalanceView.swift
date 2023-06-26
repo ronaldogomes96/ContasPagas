@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct BalanceView: View {
-    @StateObject var viewModel: BalanceViewModel
+    @StateObject private var viewModel: BalanceViewModel
+    
+    init(viewModel: BalanceViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         NavigationView {

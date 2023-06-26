@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @StateObject var viewModel = AuthenticationViewModel()
+    @StateObject private var viewModel: AuthenticationViewModel
     @State private var isDarkMode = true
+    private let viewFactory: ViewFactory
+    
+    init(viewModel: AuthenticationViewModel,
+         viewFactory: ViewFactory) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+        self.viewFactory = viewFactory
+    }
     
     var body: some View {
         NavigationStack {
@@ -34,6 +41,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(viewModel: AuthenticationViewModel(), viewFactory: ViewFactory(viewModelFactory: ViewModelFactory()))
     }
 }

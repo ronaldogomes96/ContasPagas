@@ -10,7 +10,11 @@ import AuthenticationServices
 import GoogleSignInSwift
 
 struct LoginView: View {
-    @ObservedObject var viewModel: AuthenticationViewModel
+    @StateObject private var viewModel: AuthenticationViewModel
+    
+    init(viewModel: AuthenticationViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
 
     var body: some View {
         NavigationStack {

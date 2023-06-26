@@ -11,8 +11,9 @@ import GoogleSignIn
 
 @main
 struct ContasPagasApp: App {
-    let persistenceController = PersistenceController.shared
+    private let persistenceController = PersistenceController.shared
     @StateObject var viewModel = AuthenticationViewModel()
+    private let viewFactory: ViewFactory = ViewFactory(viewModelFactory: ViewModelFactory())
     
     init() {
         setupAuthentication()
@@ -23,7 +24,7 @@ struct ContasPagasApp: App {
             NavigationStack {
                 switch viewModel.userLoginState {
                 case .signedIn:
-                    DashboardTabBarView()
+                    DashboardTabBarView(viewFactory: viewFactory)
                 case .signedOut, .signedError:
                     LoginView(viewModel: viewModel)
                 case .loading:

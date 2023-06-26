@@ -31,6 +31,7 @@
 		779A998D29ED67190098902E /* TradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A998C29ED67190098902E /* TradeViewModel.swift */; };
 		779A998F29ED678D0098902E /* FinanceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A998E29ED678D0098902E /* FinanceType.swift */; };
 		779A999129ED71390098902E /* TradeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779A999029ED71390098902E /* TradeType.swift */; };
+		77A007B52A3FB2EC00608A2B /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A007B42A3FB2EC00608A2B /* ViewFactory.swift */; };
 		77B16BDF29E63A31007E8125 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77B16BE129E63A31007E8125 /* Localizable.strings */; };
 		77B16BE529E63E96007E8125 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B16BE429E63E96007E8125 /* LocalizableStrings.swift */; };
 		77B767A829E9A93300746A54 /* ExpenseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B767A729E9A93300746A54 /* ExpenseType.swift */; };
@@ -41,6 +42,7 @@
 		77B767B329E9FCF200746A54 /* ExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B767B229E9FCF200746A54 /* ExpensesViewModel.swift */; };
 		77B767BB29EB013600746A54 /* IncomesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B767BA29EB013600746A54 /* IncomesViewModel.swift */; };
 		77B767BD29EB02C800746A54 /* IncomesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B767BC29EB02C800746A54 /* IncomesView.swift */; };
+		77C498972A3EBB4200C598EB /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C498962A3EBB4200C598EB /* ViewModelFactory.swift */; };
 		77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */; };
 		77EAD7AA29C6BD7D0001B965 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EAD7A929C6BD7D0001B965 /* LoginView.swift */; };
 		77EAD7AC29C6BD7F0001B965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EAD7AB29C6BD7F0001B965 /* Assets.xcassets */; };
@@ -89,6 +91,7 @@
 		779A998C29ED67190098902E /* TradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewModel.swift; sourceTree = "<group>"; };
 		779A998E29ED678D0098902E /* FinanceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceType.swift; sourceTree = "<group>"; };
 		779A999029ED71390098902E /* TradeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeType.swift; sourceTree = "<group>"; };
+		77A007B42A3FB2EC00608A2B /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		77B16BE029E63A31007E8125 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		77B16BE229E63A34007E8125 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77B16BE429E63E96007E8125 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		77B767B229E9FCF200746A54 /* ExpensesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewModel.swift; sourceTree = "<group>"; };
 		77B767BA29EB013600746A54 /* IncomesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomesViewModel.swift; sourceTree = "<group>"; };
 		77B767BC29EB02C800746A54 /* IncomesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomesView.swift; sourceTree = "<group>"; };
+		77C498962A3EBB4200C598EB /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 		77EAD7A429C6BD7D0001B965 /* ContasPagas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContasPagas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContasPagasApp.swift; sourceTree = "<group>"; };
 		77EAD7A929C6BD7D0001B965 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 		7761FBB829E4D7F100D9229C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				77C498952A3EBB2B00C598EB /* Factorys */,
 				773C440D2A2CFFF4000C5175 /* UseCases */,
 				77B767A629E9A92000746A54 /* Models */,
 				77B16BE329E63E83007E8125 /* Localizable */,
@@ -337,6 +342,15 @@
 				77B767BC29EB02C800746A54 /* IncomesView.swift */,
 			);
 			path = Incomes;
+			sourceTree = "<group>";
+		};
+		77C498952A3EBB2B00C598EB /* Factorys */ = {
+			isa = PBXGroup;
+			children = (
+				77C498962A3EBB4200C598EB /* ViewModelFactory.swift */,
+				77A007B42A3FB2EC00608A2B /* ViewFactory.swift */,
+			);
+			path = Factorys;
 			sourceTree = "<group>";
 		};
 		77EAD79B29C6BD7D0001B965 = {
@@ -561,6 +575,7 @@
 				77EAD7B429C6BD7F0001B965 /* ContasPagas.xcdatamodeld in Sources */,
 				77EAD7B129C6BD7F0001B965 /* Persistence.swift in Sources */,
 				77B767AE29E9D12000746A54 /* ExpensesModel.swift in Sources */,
+				77C498972A3EBB4200C598EB /* ViewModelFactory.swift in Sources */,
 				773C440F2A2D000A000C5175 /* IncomeUseCase.swift in Sources */,
 				773C440A2A2C263A000C5175 /* RepositoryManager.swift in Sources */,
 				779A998D29ED67190098902E /* TradeViewModel.swift in Sources */,
@@ -578,6 +593,7 @@
 				77EAD7AA29C6BD7D0001B965 /* LoginView.swift in Sources */,
 				77288BAC2A3D4E2100229122 /* SettingsView.swift in Sources */,
 				775902AA29E8B8C400822DCA /* FinanceDetailsView.swift in Sources */,
+				77A007B52A3FB2EC00608A2B /* ViewFactory.swift in Sources */,
 				77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */,
 				7779D6A129E7882900B32CAE /* BalanceView.swift in Sources */,
 				77B767B329E9FCF200746A54 /* ExpensesViewModel.swift in Sources */,

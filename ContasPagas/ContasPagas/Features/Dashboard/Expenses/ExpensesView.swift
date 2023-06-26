@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ExpensesView: View {
-    @StateObject var viewModel = ExpensesViewModel(expenseUseCase: ExpenseUseCase(repository: RepositoryManager.shared),
-                                                   expenseTypeUseCase: ExpensesTypeUseCase(repository: RepositoryManager.shared))
+    @StateObject private var viewModel: ExpensesViewModel
+    private let viewFactory: ViewFactory
+    
+    init(viewModel: ExpensesViewModel,
+         viewFactory: ViewFactory) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+        self.viewFactory = viewFactory
+    }
     
     var body: some View {
         NavigationStack {
@@ -52,7 +58,13 @@ struct ExpensesView: View {
             .navigationBarTitle(LocalizableStrings.tabbarExpense.localized)
             .navigationBarTitleDisplayMode(.large)
             .navigationBarItems(trailing:
-                                    NavigationLink(destination: buildTradeView(type: .add)) {
+                                    NavigationLink(destination: viewFactory.makeTradeView(tradeType: .add,
+                                                                                          financeType: .expense,
+                                                                                          financeName: "",
+                                                                                          financeTypeName: "",
+                                                                                          tradeValue: "",
+                                                                                          selectedDate: Date(),
+                                                                                          isPaid: false)) {
                 Image(systemName: "plus")
                     .font(.title)
                     .foregroundColor(.blue)
@@ -75,6 +87,7 @@ struct ExpensesView: View {
 
 struct ExpensesView_Previews: PreviewProvider {
     static var previews: some View {
-        ExpensesView()
+        ExpensesView(viewModel: ExpensesViewModel(expenseUseCase: ExpenseUseCase(repository: RepositoryManager.shared),
+                                                  expenseTypeUseCase: ExpensesTypeUseCase(repository: RepositoryManager.shared)), viewFactory: ViewFactory(viewModelFactory: ViewModelFactory()))
     }
 }

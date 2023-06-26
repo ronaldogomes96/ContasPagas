@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct TradeView: View {
-    @ObservedObject var viewModel: TradeViewModel
+    @StateObject private var viewModel: TradeViewModel
     @Environment(\.dismiss) var dismiss
-    
-    @State private var isPaied: Bool = false
     @State private var showAlert = false
+    
+    init(viewModel: TradeViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         NavigationStack {
@@ -40,7 +42,7 @@ struct TradeView: View {
                     
                     if viewModel.financeType == .expense {
                         Toggle(LocalizableStrings.tradeToglePayed.localized,
-                               isOn: $isPaied)
+                               isOn: $viewModel.isPaid)
                     }
                     
                     Spacer()
