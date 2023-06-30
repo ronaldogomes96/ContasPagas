@@ -12,7 +12,6 @@
 		770E1D3229C6C2A600854ECA /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 770E1D3129C6C2A600854ECA /* .swiftlint.yml */; };
 		77288BAC2A3D4E2100229122 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77288BAB2A3D4E2100229122 /* SettingsView.swift */; };
 		7739077129F96393005C5785 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7739077029F96393005C5785 /* FirebaseAuth */; };
-		7739077529F96E25005C5785 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7739077429F96E25005C5785 /* AuthenticationViewModel.swift */; };
 		773C44002A2BA429000C5175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 773C43FF2A2BA429000C5175 /* GoogleService-Info.plist */; };
 		773C44022A2BA716000C5175 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C44012A2BA716000C5175 /* UserModel.swift */; };
 		773C44052A2C1C0B000C5175 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 773C44042A2C1C0B000C5175 /* FirebaseFirestore */; };
@@ -23,6 +22,10 @@
 		773C44112A2D1947000C5175 /* ExpenseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C44102A2D1947000C5175 /* ExpenseUseCase.swift */; };
 		773C44132A2D1BB4000C5175 /* ExpensesTypeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C44122A2D1BB4000C5175 /* ExpensesTypeUseCase.swift */; };
 		773C44152A2D1EFF000C5175 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773C44142A2D1EFF000C5175 /* BalanceViewModel.swift */; };
+		77443DA22A49E81500BC3208 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77443DA12A49E81500BC3208 /* LoginState.swift */; };
+		77443DA52A4A44DE00BC3208 /* AuthenticationFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77443DA42A4A44DE00BC3208 /* AuthenticationFacade.swift */; };
+		77443DA72A4E3D4200BC3208 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77443DA62A4E3D4200BC3208 /* LoginViewModel.swift */; };
+		77443DA92A4E460800BC3208 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77443DA82A4E460800BC3208 /* SettingsViewModel.swift */; };
 		77484D0B29E6405900AEC21B /* Preview Content.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77484D0A29E6405900AEC21B /* Preview Content.xcassets */; };
 		775902AA29E8B8C400822DCA /* FinanceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775902A929E8B8C400822DCA /* FinanceDetailsView.swift */; };
 		7779D69E29E77E7900B32CAE /* DashboardTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7779D69D29E77E7900B32CAE /* DashboardTabBarView.swift */; };
@@ -73,7 +76,6 @@
 /* Begin PBXFileReference section */
 		770E1D3129C6C2A600854ECA /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		77288BAB2A3D4E2100229122 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		7739077429F96E25005C5785 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		773C43FF2A2BA429000C5175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		773C44012A2BA716000C5175 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		773C44092A2C263A000C5175 /* RepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryManager.swift; sourceTree = "<group>"; };
@@ -82,6 +84,10 @@
 		773C44102A2D1947000C5175 /* ExpenseUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseUseCase.swift; sourceTree = "<group>"; };
 		773C44122A2D1BB4000C5175 /* ExpensesTypeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesTypeUseCase.swift; sourceTree = "<group>"; };
 		773C44142A2D1EFF000C5175 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
+		77443DA12A49E81500BC3208 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		77443DA42A4A44DE00BC3208 /* AuthenticationFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFacade.swift; sourceTree = "<group>"; };
+		77443DA62A4E3D4200BC3208 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		77443DA82A4E460800BC3208 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		77484D0A29E6405900AEC21B /* Preview Content.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Content.xcassets"; sourceTree = "<group>"; };
 		775902A929E8B8C400822DCA /* FinanceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceDetailsView.swift; sourceTree = "<group>"; };
 		77664AD129D36E1000A407A1 /* ContasPagas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContasPagas.entitlements; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				77288BAB2A3D4E2100229122 /* SettingsView.swift */,
+				77443DA82A4E460800BC3208 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -182,6 +189,14 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		77443DA32A4A44CA00BC3208 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				77443DA42A4A44DE00BC3208 /* AuthenticationFacade.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		77484D0929E6404400AEC21B /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +218,6 @@
 			children = (
 				77EAD7A729C6BD7D0001B965 /* ContasPagasApp.swift */,
 				77EAD7B529C6BD7F0001B965 /* Info.plist */,
-				7739077429F96E25005C5785 /* AuthenticationViewModel.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -211,6 +225,7 @@
 		7761FBB829E4D7F100D9229C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				77443DA32A4A44CA00BC3208 /* Authentication */,
 				77C498952A3EBB2B00C598EB /* Factorys */,
 				773C440D2A2CFFF4000C5175 /* UseCases */,
 				77B767A629E9A92000746A54 /* Models */,
@@ -301,6 +316,8 @@
 			isa = PBXGroup;
 			children = (
 				77EAD7A929C6BD7D0001B965 /* LoginView.swift */,
+				77443DA12A49E81500BC3208 /* LoginState.swift */,
+				77443DA62A4E3D4200BC3208 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -577,15 +594,16 @@
 				77B767AE29E9D12000746A54 /* ExpensesModel.swift in Sources */,
 				77C498972A3EBB4200C598EB /* ViewModelFactory.swift in Sources */,
 				773C440F2A2D000A000C5175 /* IncomeUseCase.swift in Sources */,
+				77443DA22A49E81500BC3208 /* LoginState.swift in Sources */,
 				773C440A2A2C263A000C5175 /* RepositoryManager.swift in Sources */,
 				779A998D29ED67190098902E /* TradeViewModel.swift in Sources */,
 				77B16BE529E63E96007E8125 /* LocalizableStrings.swift in Sources */,
 				77B767AA29E9A9C400746A54 /* ExpenseDetailsModel.swift in Sources */,
+				77443DA72A4E3D4200BC3208 /* LoginViewModel.swift in Sources */,
 				773C44132A2D1BB4000C5175 /* ExpensesTypeUseCase.swift in Sources */,
 				77B767BD29EB02C800746A54 /* IncomesView.swift in Sources */,
 				779A998B29ED670D0098902E /* TradeView.swift in Sources */,
 				773C44112A2D1947000C5175 /* ExpenseUseCase.swift in Sources */,
-				7739077529F96E25005C5785 /* AuthenticationViewModel.swift in Sources */,
 				773C440C2A2C26C5000C5175 /* FirebaseService.swift in Sources */,
 				77B767AC29E9B4E200746A54 /* IncomeDetailsModel.swift in Sources */,
 				773C44022A2BA716000C5175 /* UserModel.swift in Sources */,
@@ -596,7 +614,9 @@
 				77A007B52A3FB2EC00608A2B /* ViewFactory.swift in Sources */,
 				77EAD7A829C6BD7D0001B965 /* ContasPagasApp.swift in Sources */,
 				7779D6A129E7882900B32CAE /* BalanceView.swift in Sources */,
+				77443DA92A4E460800BC3208 /* SettingsViewModel.swift in Sources */,
 				77B767B329E9FCF200746A54 /* ExpensesViewModel.swift in Sources */,
+				77443DA52A4A44DE00BC3208 /* AuthenticationFacade.swift in Sources */,
 				77B767BB29EB013600746A54 /* IncomesViewModel.swift in Sources */,
 				773C44152A2D1EFF000C5175 /* BalanceViewModel.swift in Sources */,
 				77B767A829E9A93300746A54 /* ExpenseType.swift in Sources */,

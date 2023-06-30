@@ -10,10 +10,10 @@ import AuthenticationServices
 import GoogleSignInSwift
 
 struct LoginView: View {
-    @StateObject private var viewModel: AuthenticationViewModel
+    @ObservedObject private var viewModel: LoginViewModel
     
-    init(viewModel: AuthenticationViewModel) {
-        _viewModel = StateObject(wrappedValue: viewModel)
+    init(viewModel: LoginViewModel) {
+        _viewModel = ObservedObject(wrappedValue: viewModel)
     }
 
     var body: some View {
@@ -27,7 +27,7 @@ struct LoginView: View {
                     .multilineTextAlignment(.center)
                 
                 GoogleSignInButton(style: .wide) {
-                    viewModel.signInUser()
+                    viewModel.signIn()
                 }
             }
             .padding(24)
@@ -37,6 +37,6 @@ struct LoginView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewModel: AuthenticationViewModel())
+        LoginView(viewModel: LoginViewModel(authenticationFacade: AuthenticationFacade()))
     }
 }

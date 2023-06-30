@@ -16,8 +16,8 @@ class ViewFactory {
         self.viewModelFactory = viewModelFactory
     }
     
-    @ViewBuilder func makeLoginView() -> some View {
-        LoginView(viewModel: AuthenticationViewModel())
+    @ViewBuilder func makeLoginView(viewModel: LoginViewModel) -> some View {
+        LoginView(viewModel: viewModel)
     }
     
     @ViewBuilder func makeDashboardView() -> some View {
@@ -37,7 +37,8 @@ class ViewFactory {
     }
     
     @ViewBuilder func makeSettingsView() -> some View {
-        SettingsView(viewModel: AuthenticationViewModel(), viewFactory: self)
+        SettingsView(viewModel: viewModelFactory.makeSettingsViewModel(),
+                     viewFactory: self)
     }
     
     @ViewBuilder func makeTradeView(tradeType: TradeType,

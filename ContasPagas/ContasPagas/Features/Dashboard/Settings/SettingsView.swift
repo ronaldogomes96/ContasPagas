@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @StateObject private var viewModel: AuthenticationViewModel
+    @StateObject private var viewModel: SettingsViewModel
     @State private var isDarkMode = true
     private let viewFactory: ViewFactory
     
-    init(viewModel: AuthenticationViewModel,
+    init(viewModel: SettingsViewModel,
          viewFactory: ViewFactory) {
         _viewModel = StateObject(wrappedValue: viewModel)
         self.viewFactory = viewFactory
@@ -27,8 +27,9 @@ struct SettingsView: View {
                     Text("Sair do App")
                         .foregroundColor(.red)
                         .onTapGesture {
-                            // chamar logout
-                            viewModel.signOut()
+                            viewModel.tryToSignOutWithSucess { sucess in
+                                // chamar logout
+                            }
                         }
                 }
                 .listStyle(.grouped)
@@ -41,6 +42,7 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView(viewModel: AuthenticationViewModel(), viewFactory: ViewFactory(viewModelFactory: ViewModelFactory()))
+        SettingsView(viewModel: SettingsViewModel(authenticationFacade: AuthenticationFacade()),
+                     viewFactory: ViewFactory(viewModelFactory: ViewModelFactory()))
     }
 }

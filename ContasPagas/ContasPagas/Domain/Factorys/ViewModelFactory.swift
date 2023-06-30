@@ -19,6 +19,7 @@ protocol ViewModelFactoryProtocol {
     func makeIncomesViewModel() -> IncomesViewModel
     func makeExpensesViewModel() -> ExpensesViewModel
     func makeBalanceViewModel() -> BalanceViewModel
+    func makeSettingsViewModel() -> SettingsViewModel
 }
 
 @MainActor
@@ -57,6 +58,10 @@ class ViewModelFactory: ViewModelFactoryProtocol {
         return BalanceViewModel(incomeUseCase: makeIncomeUseCase(),
                                 expenseTypeUseCase: makeExpenseTypeUseCase(),
                                 expensesUseCase: makeExpenseUseCase())
+    }
+    
+    func makeSettingsViewModel() -> SettingsViewModel {
+        return SettingsViewModel(authenticationFacade: AuthenticationFacade())
     }
     
     private func makeIncomeUseCase() -> FinancesUseCaseProtocol {

@@ -12,7 +12,7 @@ import GoogleSignIn
 @main
 struct ContasPagasApp: App {
     private let persistenceController = PersistenceController.shared
-    @StateObject var viewModel = AuthenticationViewModel()
+    @StateObject var viewModel = LoginViewModel(authenticationFacade: AuthenticationFacade())
     private let viewFactory: ViewFactory = ViewFactory(viewModelFactory: ViewModelFactory())
     
     init() {
@@ -28,7 +28,6 @@ struct ContasPagasApp: App {
                 case .signedOut, .signedError:
                     LoginView(viewModel: viewModel)
                 case .loading:
-                    // MARK: - TODO: inserir o loading com imagem de logo
                     ProgressView()
                 }
             }
@@ -42,5 +41,5 @@ struct ContasPagasApp: App {
 extension ContasPagasApp {
     private func setupAuthentication() {
         FirebaseApp.configure()
-      }
+    }
 }
